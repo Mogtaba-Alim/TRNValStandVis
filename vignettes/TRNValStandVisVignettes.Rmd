@@ -26,7 +26,7 @@ standardization in regards to nomenclature.
 
 Use the following commands to download **TRNValStandVis**
 
-```{r setup}
+```{r, eval= FALSE}
 install.packages("devtools")
 library("devtools")
 devtools::install_github("Mogtaba-Alim/TRNValStandVis", build_vignettes = TRUE)
@@ -35,15 +35,15 @@ library("TRNValStandVis")
 
 To list all sample functions available in the package:
 
-```r
+```{r, eval= FALSE}
  ls("package:TRNValStandVis")
- ```
+```
  
  TO list all the sample datasets in the package:
  
- ```r
- data(package= "TRNValStandVis")
- ```
+```{r, eval= FALSE}
+data(package= "TRNValStandVis")
+```
  
 ### Minimal Requirements
  
@@ -57,7 +57,7 @@ To list all sample functions available in the package:
 
 -Take in a TF and return all its target genes. Can be adjusted based on number of datasets TF-TG appears in.
 
-```r
+```{r, eval= FALSE}
 library(TRNValStandVis)
 ?TRNValStandVis::get_TGs
 ```
@@ -66,7 +66,7 @@ library(TRNValStandVis)
 
 - Take in a gene and return all the transcription factors that regulate it. Can be adjusted based on number of datasets TF-TG appears in.
 
-```r
+```{r, eval= FALSE}
 library(TRNValStandVis)
 ?TRNValStandVis::get_TFs
 ```
@@ -75,7 +75,7 @@ library(TRNValStandVis)
 
 - Take in a gene and plot that gene’s regulon including regulators and targets.
 
-```r
+```{r, eval= FALSE}
 library(TRNValStandVis)
 ?TRNValStandVis::plot_TF_regulon
 ```
@@ -84,7 +84,7 @@ library(TRNValStandVis)
 
 - Take in up to 3 gene names and plot the network involving all the genes regulons combined.
 
-```r
+```{r, eval= FALSE}
 library(TRNValStandVis)
 ?TRNValStandVis::plot_TFs_network
 ```
@@ -93,7 +93,7 @@ library(TRNValStandVis)
 
 - Take in a TF and return the validity score for all the TG’s of that TF
 
-```r
+```{r, eval=FALSE}
 library(TRNValStandVis)
 ?TRNValStandVis::get_TF_TG_val
 ```
@@ -102,7 +102,7 @@ library(TRNValStandVis)
 
 - Take in a TF and plot the validity score for all the TG’s of that TF
 
-```r
+```{r, eval= FALSE}
 library(TRNValStandVis)
 ?TRNValStandVis::plot_TF_TG_val
 ```
@@ -111,7 +111,7 @@ library(TRNValStandVis)
 
 - Takes in a TF and provides the average validty score for that TF
 
-```r
+```{r, eval= FALSE}
 library(TRNValStandVis)
 ?TRNValStandVis::get_TF_total_val
 ```
@@ -120,7 +120,7 @@ library(TRNValStandVis)
 
 - Take in a collection of TF names and plots their average validity score
 
-```r
+```{r, eval= FALSE}
 library(TRNValStandVis)
 ?TRNValStandVis::plot_TF_total_val
 ```
