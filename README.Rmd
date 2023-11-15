@@ -40,7 +40,7 @@ In order to install the latest version of this package:
 
 ```{r, eval=FALSE}
 install.packages("devtools")
-library("devtools)
+library("devtools")
 devtools::install_github("Mogtaba-Alim/TRNValStandVis", build_vignettes = TRUE)
 library("TRNValStandVis")
 ```
@@ -76,7 +76,7 @@ browseVignettes("TRNValStandVis")
 7. ***get_TF_total_val***
 - Takes in a TF and provides the average validty score for that TF
 
-9. ***plot_TF_total_val***
+8. ***plot_TF_total_val***
 - Take in a collection of TF names and plots their average validity score
 
 The packcage will also have 2 datasets. The first  will be the combined dataset of TF-TG's
@@ -91,27 +91,32 @@ The author of this package is Mogtaba Alim. All functions and processes includin
 the processing and the creation of valdity scores were done by the author without any 
 external help. 
 
-## Example
+I used the following three external packages, igraph, ggplot2 and igraph
+throughout the package. 
 
-This is a basic example which shows you how to solve a common problem:
+## References
 
-```{r example}
-library(TRNValStandVis)
-## basic example code
-```
+Dplyr. (n.d.). Retrieved November 15, 2023, from Tidyverse.org website: https://dplyr.tidyverse.org/
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Fujiyoshi, K., Bruford, E. A., Mroz, P., Sims, C. L., O’Leary, T. J., Lo, A. W. I., … Ogino, S. (2021). Standardizing gene product nomenclature—a call to action. Proceedings of the National Academy of Sciences of the United States of America, 118(3). doi:10.1073/pnas.2025207118
 
-```{r cars}
-summary(cars)
-```
+Ggplot2. (n.d.). Retrieved November 15, 2023, from Tidyverse.org website: https://ggplot2.tidyverse.org
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
+igraph – Network analysis software. (n.d.). Retrieved November 15, 2023, from Igraph.org website: https://igraph.org/
 
-You can also embed plots, for example:
+Lachmann, A., Xu, H., Krishnan, J., Berger, S. I., Mazloom, A. R., & Ma’ayan, A. (2010). ChEA: transcription factor regulation inferred from integrating genome-wide ChIP-X experiments. Bioinformatics (Oxford, England), 26(19), 2438–2444. doi:10.1093/bioinformatics/btq466
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
+Liberzon, A., Birger, C., Thorvaldsdóttir, H., Ghandi, M., Mesirov, J. P., & Tamayo, P. (2015). The molecular signatures database hallmark gene set collection. Cell Systems, 1(6), 417–425. doi:10.1016/j.cels.2015.12.004
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+Liska, O., Bohár, B., Hidas, A., Korcsmáros, T., Papp, B., Fazekas, D., & Ari, E. (2022). TFLink: an integrated gateway to access transcription factor–target gene interactions for multiple species. Database: The Journal of Biological Databases and Curation, 2022, baac083. doi:10.1093/database/baac083
+
+The R project for statistical computing. (n.d.). Retrieved November 15, 2023, from R-project.org website: http://www.R-project.org
+
+Zhang, Q., Liu, W., Zhang, H.-M., Xie, G.-Y., Miao, Y.-R., Xia, M., & Guo, A.-Y. (2020). HTFtarget: A comprehensive database for regulations of human transcription factors and their targets. Genomics, Proteomics & Bioinformatics, 18(2), 120–128. doi:10.1016/j.gpb.2019.09.006
+
+## Acknowledgements
+
+This package was developed as part of an assessment for 2023 BCB410H: Applied Bioinformat-
+ics course at the University of Toronto, Toronto, CANADA. `TRNValStandVis` welcomes issues,
+enhancement requests, and other contributions. To submit an issue, use the GitHub issues.
+
