@@ -14,4 +14,5 @@ This function takes a vector of Transcription Factor (TF) names and plots a grap
 }
 \examples{
 plot_TF_total_val(c("CTCF", "GATA1", "AHR", "AHRR", "BDP1"))
+
 }

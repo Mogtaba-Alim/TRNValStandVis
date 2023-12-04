@@ -6,6 +6,8 @@
 #' @import ggplot2
 #' @examples
 #' plot_TF_total_val(c("CTCF", "GATA1", "AHR", "AHRR", "BDP1"))
+#'
+#' @export
 plot_TF_total_val <- function(tf_names) {
   data(TF_Avg_Valid, package = "TRNValStandVis")
 
