@@ -104,8 +104,9 @@ throughout the package.
 
 ## References
 
-Dplyr. (n.d.). Retrieved November 15, 2023, from Tidyverse.org website:
-<https://dplyr.tidyverse.org/>
+Wickham H, François R, Henry L, Müller K, Vaughan D (2023). *dplyr: A
+Grammar of Data Manipulation*. R package version 1.1.4,
+<https://CRAN.R-project.org/package=dplyr>.
 
 Fujiyoshi, K., Bruford, E. A., Mroz, P., Sims, C. L., O’Leary, T. J.,
 Lo, A. W. I., … Ogino, S. (2021). Standardizing gene product
@@ -113,11 +114,12 @@ nomenclature—a call to action. Proceedings of the National Academy of
 Sciences of the United States of America, 118(3).
 <doi:10.1073/pnas.2025207118>
 
-Ggplot2. (n.d.). Retrieved November 15, 2023, from Tidyverse.org
-website: <https://ggplot2.tidyverse.org>
+H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
+New York, 2016.
 
-igraph – Network analysis software. (n.d.). Retrieved November 15, 2023,
-from Igraph.org website: <https://igraph.org/>
+Csardi G, Nepusz T (2006). “The igraph software package for complex
+network research.” *InterJournal*, *Complex Systems*, 1695.
+<https://igraph.org>.
 
 Lachmann, A., Xu, H., Krishnan, J., Berger, S. I., Mazloom, A. R., &
 Ma’ayan, A. (2010). ChEA: transcription factor regulation inferred from
