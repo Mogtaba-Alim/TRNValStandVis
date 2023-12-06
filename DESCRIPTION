@@ -4,10 +4,17 @@ Version: 0.1.0
 Authors@R: 
     person("Mogtaba", "Alim", , "mogtaba.alim@mail.utoronto.ca", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: `TRNValStandVis` is an R package that consolidates transcription 
+factor-target gene (TF-TG) interaction data from MSigDB, hTFtarget, ChEA3, and
+TFLink into a single HGNC-compliant dataset. It evaluates the quality of TF-TG 
+interactions and provides a score for each TF's overall quality. The package 
+also visualizes TF-TG regulons and networks, compares TFs qualitatively, and
+standardizes nomenclature and validation metrics for TF-TG interactions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 3.5.0)
 RoxygenNote: 7.2.3
 Suggests: 
     knitr,
