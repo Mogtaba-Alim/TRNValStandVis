@@ -17,7 +17,7 @@ A dataframe with 5 columns:
 }
 }
 \usage{
-TF_TG_Valid_Comb
+data(TF_TG_Valid_Comb)
 }
 \description{
 This dataset combines data from the ChEA3, hTFtarget, MSigDB and TFLink to create a dataset of all the TF-TG interactions available in all the 4 datasets.

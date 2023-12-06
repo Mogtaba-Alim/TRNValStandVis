@@ -14,7 +14,7 @@ A dataframe with 2 columns:
 }
 }
 \usage{
-TF_Avg_Valid
+data(TF_Avg_Valid)
 }
 \description{
 This dataset maps every HGNC standardized TF to its overal avg validation score
