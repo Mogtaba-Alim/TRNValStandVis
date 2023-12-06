@@ -16,8 +16,6 @@
 #'
 #'   ...
 #' }
-#'
-#' @export
 "TF_TG_Valid_Comb"
 
 #' Dataset of the overall validation score of individual Transcription Factors.
@@ -32,6 +30,4 @@
 #'
 #'   ...
 #' }
-#'
-#' @export
 "TF_Avg_Valid"
