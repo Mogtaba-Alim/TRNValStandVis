@@ -6,19 +6,43 @@
 #' @param gene_names A vector of up to three gene names.
 #' @param max_TFs An integer limiting the maximum number of TFs shown for each gene. Default is NULL, meaning no limit.
 #' @param max_targets An integer limiting the maximum number of target genes shown for each gene. Default is NULL, meaning no limit.
-#' @import igraph
+#' @importFrom igraph graph_from_data_frame
+#' @importFrom igraph V
+#' @importFrom igraph plot
+#'
+#'
 #' @examples
 #' plot_TFs_network(c("CTCF", "GATA1"))
 #' plot_TFs_network(c("CTCF", "GATA1", "STAT1"), max_TFs = 10, max_targets = 10)
 #'
 #' @export
 plot_TFs_network <- function(gene_names, max_TFs = NULL, max_targets = NULL) {
-  if(length(gene_names) > 3) {
-    stop("Maximum of 3 genes are allowed")
+  # Validate gene_names length
+  if (length(gene_names) > 3) {
+    stop("Maximum of 3 genes are allowed.")
   }
 
   # Load your package data
   data(TF_TG_Valid_Comb, package = "TRNValStandVis")
+
+  # Validate gene_names
+  valid_genes <- unique(c(TF_TG_Valid_Comb$TF, TF_TG_Valid_Comb$Target_Gene))
+  invalid_genes <- setdiff(gene_names, valid_genes)
+  if (length(invalid_genes) > 0) {
+    stop("Invalid gene names provided: ", paste(invalid_genes, collapse = ", "))
+  }
+
+  # Validate max_TFs
+  if (!is.null(max_TFs) && (!is.numeric(max_TFs) || max_TFs < 0)) {
+    warning("max_TFs must be a non-negative integer. Ignoring max_TFs and proceeding without a limit.")
+    max_TFs <- NULL
+  }
+
+  # Validate max_targets
+  if (!is.null(max_targets) && (!is.numeric(max_targets) || max_targets < 0)) {
+    warning("max_targets must be a non-negative integer. Ignoring max_targets and proceeding without a limit.")
+    max_targets <- NULL
+  }
 
   edges <- data.frame(from = character(), to = character())
   all_TFs <- character()
@@ -48,12 +72,16 @@ plot_TFs_network <- function(gene_names, max_TFs = NULL, max_targets = NULL) {
   }
 
   # Create graph
-  graph <- graph_from_data_frame(edges, directed = TRUE)
+  graph <- igraph::graph_from_data_frame(edges, directed = TRUE)
 
   # Set node colors: input genes in one color, TFs in another, target genes in a third color
-  V(graph)$color <- ifelse(names(V(graph)) %in% gene_names, "red",
-                           ifelse(names(V(graph)) %in% all_TFs, "orange", "green"))
+  igraph::V(graph)$color <- ifelse(names(igraph::V(graph)) %in% gene_names, "red",
+                                   ifelse(names(igraph::V(graph)) %in% all_TFs, "orange", "green"))
 
   # Plot the graph
-  plot(graph, vertex.color = V(graph)$color, edge.arrow.size = 0.5)
+  igraph::plot(graph, vertex.color = igraph::V(graph)$color, edge.arrow.size = 0.5)
+
+  return(1)
 }
+
+ # [END]

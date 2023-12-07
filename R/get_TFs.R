@@ -17,14 +17,36 @@ get_TFs <- function(target_gene, validation_freq = 1, max_size = NULL) {
   # Ensure the package data is loaded
   data(TF_TG_Valid_Comb, package = "TRNValStandVis")
 
+  # Extract the list of valid Target Genes from the dataset
+  valid_genes <- unique(TF_TG_Valid_Comb$Target_Gene)
+
+  # Validate target_gene
+  if (!target_gene %in% valid_genes) {
+    stop("Invalid Target Gene name provided.")
+  }
+
+  # Validate validation_freq
+  if (!is.numeric(validation_freq) || validation_freq < 0 || validation_freq > 4) {
+    stop("validation_freq must be a non-negative numeric value.")
+  }
+
+  # Validate max_size
+  if (!is.null(max_size) && (!is.numeric(max_size) || max_size < 0)) {
+    warning("max_size must be a non-negative integer. Ignoring max_size and proceeding without a limit.")
+    max_size <- NULL
+  }
+
   # Filter the data for the given Target Gene and validation frequency
   filtered_data <- subset(TF_TG_Valid_Comb, Target_Gene == target_gene & Count >= validation_freq)
 
   # If max_size is specified and is less than the length of filtered_data, return a limited number of TFs
-  if (!is.null(max_size) && max_size < length(filtered_data$TF)) {
+  if (!is.null(max_size) && !is.na(max_size) && max_size < length(filtered_data$TF)) {
     return(filtered_data$TF[1:max_size])
   }
 
   # Return the vector of TFs
   return(filtered_data$TF)
 }
+
+# [END]
+

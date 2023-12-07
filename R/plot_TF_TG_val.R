@@ -7,7 +7,14 @@
 #' @param tf_name A string specifying the name of the Transcription Factor.
 #' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1.
 #' @param max_size An integer that limits the maximum number of target genes for which scores are plotted. Default is NULL, meaning no limit.
-#' @import ggplot2
+#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 geom_point
+#' @importFrom ggplot2 scale_color_viridis_d
+#' @importFrom ggplot2 labs
+#' @importFrom ggplot2 theme
+#' @importFrom ggplot2 element_text
+#'
 #' @examples
 #' plot_TF_TG_val("CTCF")
 #' plot_TF_TG_val("CTCF", validation_freq = 2, max_size = 10)
@@ -16,6 +23,23 @@
 #' @export
 plot_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = NULL) {
   data(TF_TG_Valid_Comb, package = "TRNValStandVis")
+
+  # Validate tf_name (assuming valid_TFs is the unique TFs in TF_TG_Valid_Comb)
+  valid_TFs <- unique(TF_TG_Valid_Comb$TF)
+  if (!tf_name %in% valid_TFs) {
+    stop("Invalid TF name provided.")
+  }
+
+  # Validate validation_freq
+  if (!is.numeric(validation_freq) || validation_freq < 0 || validation_freq > 4) {
+    stop("validation_freq must be a non-negative numeric value.")
+  }
+
+  # Validate max_size
+  if (!is.null(max_size) && (!is.numeric(max_size) || max_size < 0)) {
+    warning("max_size must be a non-negative integer. Ignoring max_size and proceeding with available data.")
+    max_size <- NULL
+  }
 
   # Filter data for the given TF and validation frequency
   filtered_data <- subset(TF_TG_Valid_Comb, TF == tf_name & Count >= validation_freq)
@@ -26,11 +50,14 @@ plot_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = NULL) {
   }
 
   # Plotting
-  ggplot(filtered_data, aes(x = Target_Gene, y = TF_TG_Exp_qual_score, color = Target_Gene)) +
-    geom_point() +
-    scale_color_viridis_d() +
-    labs(title = paste(tf_name, "Target Gene Validation Scores"),
-         x = "Target Gene",
-         y = "Validation Score") +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1))  # Adjust text angle for better readability if many genes
+  ggplot2::ggplot(filtered_data, ggplot2::aes(x = Target_Gene, y = TF_TG_Exp_qual_score, color = Target_Gene)) +
+    ggplot2::geom_point() +
+    ggplot2::scale_color_viridis_d() +
+    ggplot2::labs(title = paste(tf_name, "Target Gene Validation Scores"),
+                  x = "Target Gene",
+                  y = "Validation Score") +
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, hjust = 1))  # Adjust text angle for better readability if many genes
 }
+
+
+# [END]

@@ -6,14 +6,37 @@
 #' @param gene_name A string specifying the name of the gene.
 #' @param max_TFs An integer limiting the maximum number of TFs shown. Default is NULL, meaning no limit.
 #' @param max_targets An integer limiting the maximum number of target genes shown. Default is NULL, meaning no limit.
-#' @import igraph
+#' @importFrom igraph graph_from_data_frame
+#' @importFrom igraph V
+#' @importFrom igraph plot
 #' @examples
 #' plot_TF_regulon("CTCF")
 #' plot_TF_regulon("CTCF", max_TFs = 10, max_targets = 10)
 #'
 #' @export
 plot_TF_regulon <- function(gene_name, max_TFs = NULL, max_targets = NULL) {
+  # Ensure the package data is loaded
   data(TF_TG_Valid_Comb, package = "TRNValStandVis")
+
+  # Extract the list of valid genes from the dataset
+  valid_genes <- unique(c(TF_TG_Valid_Comb$TF, TF_TG_Valid_Comb$Target_Gene))
+
+  # Validate gene_name
+  if (!gene_name %in% valid_genes) {
+    stop("Invalid gene name provided.")
+  }
+
+  # Validate max_TFs
+  if (!is.null(max_TFs) && (!is.numeric(max_TFs) || max_TFs < 0)) {
+    warning("max_TFs must be a non-negative integer. Ignoring max_TFs and proceeding without a limit.")
+    max_TFs <- NULL
+  }
+
+  # Validate max_targets
+  if (!is.null(max_targets) && (!is.numeric(max_targets) || max_targets < 0)) {
+    warning("max_targets must be a non-negative integer. Ignoring max_targets and proceeding without a limit.")
+    max_targets <- NULL
+  }
 
   # Extract TFs regulating the gene and apply max_TFs limit if specified
   regulating_TFs <- subset(TF_TG_Valid_Comb, Target_Gene == gene_name)$TF
@@ -33,13 +56,15 @@ plot_TF_regulon <- function(gene_name, max_TFs = NULL, max_targets = NULL) {
   edges <- rbind(edges_from_TFs, edges_to_targets)
 
   # Create graph
-  graph <- graph_from_data_frame(edges, directed = TRUE)
+  graph <- igraph::graph_from_data_frame(edges, directed = TRUE)
 
   # Set node colors: TFs in one color, target genes in another, and the main gene in a third color
-  V(graph)$color <- ifelse(names(V(graph)) == gene_name, "red",
-                           ifelse(names(V(graph)) %in% regulating_TFs, "Orange", "green"))
-
+  igraph::V(graph)$color <- ifelse(names(igraph::V(graph)) == gene_name, "red",
+                                   ifelse(names(igraph::V(graph)) %in% regulating_TFs, "orange", "green"))
 
   # Plot the graph
-  plot(graph, edge.arrow.size = 0.5)
+  igraph::plot(graph, edge.arrow.size = 0.5)
 }
+
+
+# [END]

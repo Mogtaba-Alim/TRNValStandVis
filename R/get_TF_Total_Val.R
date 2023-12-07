@@ -10,8 +10,16 @@
 #'
 #' @export
 get_TF_Total_Val <- function(tf_name) {
-
+  # Load necessary data
   data(TF_Avg_Valid, package = "TRNValStandVis")
+
+  # Extract the list of valid TFs from the dataset
+  valid_TFs <- unique(TF_Avg_Valid$TF)
+
+  # Validate tf_name
+  if (!tf_name %in% valid_TFs) {
+    stop("Invalid TF name provided.")
+  }
 
   # Filter for the specified TF and retrieve the score
   score <- subset(TF_Avg_Valid, TF == tf_name)$Ratio_to_Overall_Avg
@@ -24,3 +32,6 @@ get_TF_Total_Val <- function(tf_name) {
     return(score)
   }
 }
+
+# [END]
+
