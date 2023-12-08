@@ -20,6 +20,11 @@
 #' @docType data
 #' @usage data(TF_TG_Valid_Comb)
 #'
+#' @examples
+#' \dontrun{
+#'  TF_TG_Valid_Comb
+#' }
+#'
 "TF_TG_Valid_Comb"
 
 #' Dataset of the overall validation score of individual Transcription Factors.
@@ -38,4 +43,10 @@
 #' @name TF_Avg_Valid
 #' @docType data
 #' @usage data(TF_Avg_Valid)
+#'
+#' @examples
+#' \dontrun{
+#'  TF_Avg_Valid
+#' }
+#'
 "TF_Avg_Valid"
