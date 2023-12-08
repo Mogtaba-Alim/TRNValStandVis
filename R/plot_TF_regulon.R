@@ -8,7 +8,6 @@
 #' @param max_targets An integer limiting the maximum number of target genes shown. Default is NULL, meaning no limit.
 #' @importFrom igraph graph_from_data_frame
 #' @importFrom igraph V
-#' @importFrom igraph plot
 #' @examples
 #' plot_TF_regulon("CTCF")
 #' plot_TF_regulon("CTCF", max_TFs = 10, max_targets = 10)
@@ -63,7 +62,7 @@ plot_TF_regulon <- function(gene_name, max_TFs = NULL, max_targets = NULL) {
                                    ifelse(names(igraph::V(graph)) %in% regulating_TFs, "orange", "green"))
 
   # Plot the graph
-  igraph::plot(graph, edge.arrow.size = 0.5)
+  plot(graph, edge.arrow.size = 0.5)
 }
 
 

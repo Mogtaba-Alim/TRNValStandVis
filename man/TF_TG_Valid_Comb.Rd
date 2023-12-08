@@ -8,7 +8,7 @@
 A dataframe with 5 columns:
 \describe{
 \item{TF}{Transcription Factor name in HGNC. }
-\item{Target Gene}{Target Gene name in HGNC.}
+\item{Target_Gene}{Target Gene name in HGNC.}
 \item{Count}{Frequency of TF-TG across the datasets.}
 \item{TF_TG_Exp_qual_score}{Exponential validation score of TF-TG based on frequency}
 \item{Ratio_to_TF_Avg}{Normalized validation score.}
@@ -26,5 +26,11 @@ Based on the count of appearence of a TF-TG in the datasets a validation score w
 }
 \details{
 Description of the dataset.
+}
+\examples{
+\dontrun{
+ TF_TG_Valid_Comb
+}
+
 }
 \keyword{datasets}

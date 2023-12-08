@@ -1,10 +1,10 @@
-context("Tests for get_TF_Total_Val function")
+testthat::context("Tests for get_TF_Total_Val function")
 library(TRNValStandVis)
 
 # Test with a known TF
 testthat::test_that("Correct score is returned for a known TF", {
   known_tf <- "CTCF"
-  known_score <- 1.076605
+  known_score <- 1.07660522
 
   testthat::expect_equal(get_TF_Total_Val(known_tf), known_score)
 })
@@ -13,10 +13,10 @@ testthat::test_that("Correct score is returned for a known TF", {
 testthat::test_that("NA and warning are returned for an unknown TF", {
   unknown_tf <- "UnknownTF"
 
-  # Expect a warning
-  testthat::expect_warning(score <- get_TF_Total_Val(unknown_tf), "TF not found in the dataset.")
+  # Expect an error
+  testthat::expect_error(score <- get_TF_Total_Val(unknown_tf), "Invalid TF name provided.")
 
-  # Expect NA as the return value
-  testthat::expect_true(is.na(score))
+  # Expect the score variable to not exist
+  testthat::expect_error(score, "object 'score' not found")
 })
 

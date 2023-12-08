@@ -1,4 +1,4 @@
-context("Test get_TF's")
+testthat::context("Test get_TF's")
 library(TRNValStandVis)
 
 testthat::test_that("Test with Target Gene CTCF,  frequency 2 amd max size 5", {

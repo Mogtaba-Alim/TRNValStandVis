@@ -8,7 +8,6 @@
 #' @param max_targets An integer limiting the maximum number of target genes shown for each gene. Default is NULL, meaning no limit.
 #' @importFrom igraph graph_from_data_frame
 #' @importFrom igraph V
-#' @importFrom igraph plot
 #'
 #'
 #' @examples
@@ -79,7 +78,7 @@ plot_TFs_network <- function(gene_names, max_TFs = NULL, max_targets = NULL) {
                                    ifelse(names(igraph::V(graph)) %in% all_TFs, "orange", "green"))
 
   # Plot the graph
-  igraph::plot(graph, vertex.color = igraph::V(graph)$color, edge.arrow.size = 0.5)
+  plot(graph, vertex.color = igraph::V(graph)$color, edge.arrow.size = 0.5)
 
   return(1)
 }

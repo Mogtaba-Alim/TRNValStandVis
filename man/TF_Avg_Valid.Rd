@@ -20,4 +20,10 @@ data(TF_Avg_Valid)
 This dataset maps every HGNC standardized TF to its overal avg validation score
 over all it TF-TG interactions
 }
+\examples{
+\dontrun{
+ TF_Avg_Valid
+}
+
+}
 \keyword{datasets}

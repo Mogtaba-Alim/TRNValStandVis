@@ -1,4 +1,4 @@
-context("Test getTG's")
+testthat::context("Test getTG's")
 library(TRNValStandVis)
 
 testthat::test_that("Test with TF GATA1 and frequency 2", {
