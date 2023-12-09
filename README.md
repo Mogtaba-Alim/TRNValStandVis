@@ -86,19 +86,31 @@ browseVignettes("TRNValStandVis")
 Below is an example overview of the visualization features available
 with this package:
 
-`plot_TF_regulon` ![](./inst/extdata/plot_TF_regulon_Example.png) *This
-function plots a graph showing all the TF’s that regulate a given gene
-and all the TG’s regulated by it.*
+`plot_TF_regulon`
 
-`plot_TF_TG_val` ![](./inst/extdata/plot_TF_TG_val_Example.png) *This
-function plots the target genes against their TE_TG_Exp_qual_score for a
-specified Transcription Factor (TF).*
+![](./inst/extdata/plot_TF_regulon_Example.png)
 
-`plot_TF_total_val` ![](./inst/extdata/plot_TF_total_val_Example.png)
+*This function plots a graph showing all the TF’s that regulate a given
+gene and all the TG’s regulated by it.*
+
+`plot_TF_TG_val`
+
+![](./inst/extdata/plot_TF_TG_val_Example.png)
+
+*This function plots the target genes against their TE_TG_Exp_qual_score
+for a specified Transcription Factor (TF).*
+
+`plot_TF_total_val`
+
+![](./inst/extdata/plot_TF_total_val_Example.png)
+
 *This function takes a vector of Transcription Factor (TF) names and
 plots a graph of their names against their Validation Scores.*
 
-`plot_TFs_network` ![](./inst/extdata/plot_TFs_network_Example.png)
+`plot_TFs_network`
+
+![](./inst/extdata/plot_TFs_network_Example.png)
+
 *This function plots a combined graph showing all the transcription
 factors (TFs) that regulate the input genes and all the target genes
 regulated by them.*
