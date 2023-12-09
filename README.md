@@ -91,28 +91,28 @@ with this package:
 <table>
 <tr>
 <td>
-![1. plot_TF_regulon]() <br> <em>Explanation for Image 1: \[Your
-two-sentence explanation here.\]</em>
+![](inst/extdata/plot_TF_regulon_Example.png) <br> <em>1.
+plot_tf_regulon: \[Plots a graph showing all the TF’s that regulate a
+given gene and all the TG’s regulated by it.\]</em>
 </td>
 <td>
-![2.
-plot_TF_regulon](/private/var/folders/kc/38g1669d0nl88m5qg06psg3w0000gn/T/RtmpD3ehRX/temp_libpathbfa36675231d/TRNValStandVis/extdata/plot_TF_TG_val_Example.png)
-<br> <em>Explanation for Image 2: \[Your two-sentence explanation
-here.\]</em>
+![](inst/extdata/plot_TF_TG_val_Example.png) <br> <em>Explanation for
+Image 2: \[This function plots the target genes against their
+TF_TG_Exp_qual_score for a specified Transcription Factor (TF).\]</em>
 </td>
 </tr>
 <tr>
 <td>
-![3.
-plot_TF_regulon](/private/var/folders/kc/38g1669d0nl88m5qg06psg3w0000gn/T/RtmpD3ehRX/temp_libpathbfa36675231d/TRNValStandVis/extdata/plot_TF_total_val_Example.png)
-<br> <em>Explanation for Image 3: \[Your two-sentence explanation
-here.\]</em>
+![](inst/extdata/plot_TF_total_val_Example.png) <br> <em>Explanation for
+Image 3: \[This function takes a vector of Transcription Factor (TF)
+names and plots a graph of their names against their Validation
+Scores.\]</em>
 </td>
 <td>
-![4.
-plot_TF_regulon](/private/var/folders/kc/38g1669d0nl88m5qg06psg3w0000gn/T/RtmpD3ehRX/temp_libpathbfa36675231d/TRNValStandVis/extdata/plot_TFs_network_Example.png)
-<br> <em>Explanation for Image 4: \[Your two-sentence explanation
-here.\]</em>
+![](inst/extdata/plot_TFs_network_Example.png) <br> <em>Explanation for
+Image 4: \[This function plots a combined graph showing all the
+transcription factors (TFs) that regulate the input genes and all the
+target genes regulated by them.\]</em>
 </td>
 </tr>
 </table>

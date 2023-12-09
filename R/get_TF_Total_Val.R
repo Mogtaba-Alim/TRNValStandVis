@@ -1,7 +1,7 @@
 #' Retrieve Score for a Given Transcription Factor from tf_metrics
 #'
 #' This function returns the Ratio_to_Overall_Avg score for a specified Transcription Factor (TF)
-#' from the tf_metrics dataset. The Ratio_to_Overall_Avg is qualitative value
+#' from the TF_Avg_Valid dataset. The Ratio_to_Overall_Avg is qualitative value
 #' that represents the normalized average validation quality of a specific
 #' TF over all TF-TG interactions in the combined dataset that involved that
 #' TF.
