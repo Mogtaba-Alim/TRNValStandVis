@@ -1,8 +1,8 @@
 #' Retrieve validation score for all Target Genes(TG) of a given Transcription Factor(TF)
 #'
-#' This function returns the validation score for all target genes of a specified franscription factor,
+#' This function returns the validation score for all target genes of a specified transcription factor,
 #' considering the frequency of the count, and limits the number of target genes based on max_size.
-#' The validation score is represented by TF_TG_Exp_qual_score in the TF_TG_Valid_Comb datasets
+#' The validation score is represented by TF_TG_Exp_qual_score in the TF_TG_Valid_Comb dataset
 #' and is a qualitative score for each TF-TG interaction based on validation across
 #' datasets and in comparison to other TF-TG's in the combined datasets.
 #'

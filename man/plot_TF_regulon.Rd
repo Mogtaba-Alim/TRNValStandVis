@@ -9,9 +9,9 @@ plot_TF_regulon(gene_name, max_TFs = 30, max_targets = 30)
 \arguments{
 \item{gene_name}{A string specifying the name of the gene.}
 
-\item{max_TFs}{An integer limiting the maximum number of TFs shown. Default is NULL, meaning no limit.}
+\item{max_TFs}{An integer limiting the maximum number of TFs shown. Default is 30, for optimal visualization.}
 
-\item{max_targets}{An integer limiting the maximum number of target genes shown. Default is NULL, meaning no limit.}
+\item{max_targets}{An integer limiting the maximum number of target genes shown. Default is 30, for optimal visualization.}
 }
 \value{
 A value of 1 indicating that the plot function has run without any errors.

@@ -9,9 +9,9 @@ plot_TF_TG_val(tf_name, validation_freq = 1, max_size = 30)
 \arguments{
 \item{tf_name}{A string specifying the name of the Transcription Factor.}
 
-\item{validation_freq}{A numeric value representing the validation frequency threshold. Default is 1.}
+\item{validation_freq}{A numeric value representing the validation frequency threshold. Default is 1. Maximum is 4.}
 
-\item{max_size}{An integer that limits the maximum number of target genes for which scores are plotted. Default is NULL, meaning no limit.}
+\item{max_size}{An integer that limits the maximum number of target genes for which scores are plotted. Default is 30, for optimal visualization.}
 }
 \value{
 A value of 1 indicating that the plot function has run without any errors

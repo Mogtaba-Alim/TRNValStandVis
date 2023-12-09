@@ -9,7 +9,7 @@ get_TFs(target_gene, validation_freq = 1, max_size = NULL)
 \arguments{
 \item{target_gene}{A string specifying the name of the Target Gene.}
 
-\item{validation_freq}{A numeric value representing the validation frequency threshold. Default is 1.}
+\item{validation_freq}{A numeric value representing the validation frequency threshold. Default is 1. Maximum is 4}
 
 \item{max_size}{An integer that limits the maximum size of the returned vector of TFs. Default is NULL, meaning no limit.}
 }

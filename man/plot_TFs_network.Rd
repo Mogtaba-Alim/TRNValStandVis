@@ -7,11 +7,11 @@
 plot_TFs_network(gene_names, max_TFs = 10, max_targets = 10)
 }
 \arguments{
-\item{gene_names}{A vector of up to three gene names.}
+\item{gene_names}{A vector of up to three gene names. Set to 3 genes for optimal visualization.}
 
-\item{max_TFs}{An integer limiting the maximum number of TFs shown for each gene. Default is NULL, meaning no limit.}
+\item{max_TFs}{An integer limiting the maximum number of TFs shown for each gene. Default is 10, for optimal visualization.}
 
-\item{max_targets}{An integer limiting the maximum number of target genes shown for each gene. Default is NULL, meaning no limit.}
+\item{max_targets}{An integer limiting the maximum number of target genes shown for each gene. Default is 10, for optimal visualization.}
 }
 \value{
 A value of 1 indicating that the plot function has run without any errors.

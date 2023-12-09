@@ -20,12 +20,16 @@ knitr::opts_chunk$set(
 
 ## Description
 
-`TRNValStandVis` is an R packacge that validates and 
+`TRNValStandVis` is an R package that visualizes, validates and
+standardizes Transcription Factor(TF) - Target Genes(TG) interactions and
+Transcription Regulatory Networks(TRN), in regards to representation, and
+nomenclatures as well.
+
 It combines transcription factor - target gene interaction data from four data sets, 
 the Molecular Signatures Database (MSigDB) by GSEA, hTFtarget by Zhang et al.,
 the ChIP-X Enrichment Analysis Version 3 (ChEA3) by Ma'ayan lab, and TFLink by Liska et al. to 
-create a single combined dataset, where all TF's and TG's are standardized to be HGNC compliant. 
-The combined data was used to create a qualitative score to evaluate the quality of TF-TG interactions
+create a single combined dataset, where all TF's and TG's are standardized to be HUGO Gene Nomenclature Committee (HGNC) compliant. 
+The combined data was used to create a qualitative score to evaluate the quality of Transcription Factor - Target Gene (TF-TG) interactions
 as well a score to assess the overall quality of a specific TF. Further abilities include
 visualizing TF-TG regulons and networks and comparing different TF's qualitatively. 
 This package will allow for the validation of TF-TG's across different sources, 
@@ -113,20 +117,95 @@ Below is an example overview of the visualization features available with this p
 
 
 
-The packcage will also have 2 datasets. The first  will be the combined dataset of TF-TG's
-and will contain columns for the number of times an interaction has appeared in the
-different datasets, the validation score for each TF-TG and a normalized validation score. 
+The package will also have 2 datasets. The first dataset called TF_TG_Valid_Comb
+will be the combined dataset of TF-TG's and will contain columns for the number
+of times an interaction has appeared in the different datasets, the validation
+score for each TF-TG and a normalized validation score. The validation score is
+represented by TF_TG_Exp_qual_score in the TF_TG_Valid_Comb dataset and is a
+qualitative score for each TF-TG interaction based on validation across
+datasets and in comparison to other TF-TG's in the combined datasets.
+Ratio_to_TF_Avg is the normalized score. 
+
+Below we see an example of the datset.
+
+![](./inst/extdata/TF_TG_Valid_Comb_Example.png)
+
 
 The second dataset, will be of all the TF's and their overall average validation score. 
+This is represented by the Ratio_to_Overall_Avg which is qualitative value
+that represents the normalized average validation quality of a specific TF over
+all TF-TG interactions in the combined dataset that involved that TF.
+
+Below we see an example of the dataset. 
+
+![](./inst/extdata/TF_Avg_Valid_Example.png)
+
 
 ## Contributions
 
 The author of this package is Mogtaba Alim. All functions and processes including
-the processing and the creation of valdity scores were done by the author without any 
-external help. 
+the processing and the creation of validity scores were done by the author.
 
-I used the following three external packages, igraph, ggplot2 and igraph
-throughout the package. 
+The author wrote the get_TF_TG_val function which presents the validation score
+for all target genes of a specified transcription factor. The function uses the
+filter and arrange functions from the dplyr package to sort the data frame
+based on the values of the TF_TG_Exp_qual_score column and to filter the data 
+frame for values that match the conditions we are looking for. We also used
+the pipe method from the magrittr package for the chaining of functions. 
+
+The author also wrote the get_TF_Total_Val function which presents the 
+Ratio_to_Overall_Avg score for a specified transcription factor from the
+TF_Avg_Valid dataset. This function used no external packages.  
+
+They author also wrote the get_TFs function which presents a vector of
+transcription factors that regulate a specified target gene. This function used
+no external packages. 
+
+The author wrote the get_TGs function which presented a vector of target genes
+associated with a specified transcription factor name. This function used no 
+external packages. 
+
+The author wrote the plot_TF_regulon function which plots a graph showing all
+the transcription factors that regulate a given gene and all the
+target genes regulated by it. The package utilized three functions from the 
+igraph package. Firstly the graph_from_data_frame was used to create a graph
+object from a data frame, then the V(graph) function was used to access the nodes
+of the graph object created using the igraph package. Finally the layout_with_fr
+function was used to create a well spaced layout for the graph, specifically
+using the Fruchterman-Reingold layout algorithm, which is a force-directed
+algorithm often used for arranging nodes in a visually pleasing manner.
+
+The author wrote the plot_TF_TG_val function which the target genes against
+their TF_TG_Exp_qual_score for a specified transcription factor. This function
+used several functions from the ggplot2 package. Firstly the ggplot function
+was used to create the plot, with that the aes function is used to define 
+each part of the data represented on the plot in terms of colors, shapes, sizes etc.
+Furthermore, the geom_point was used to add the points to the plot and the 
+scale_color_viridis_d was used to set the color scale of the plot. The element_text 
+function was used to customize the appearance of text in the plot. Finally the 
+labs function was used to add labels to the plot and the theme was used to 
+customize these labels. 
+
+The author wrote the plot_TF_Total_Val function which takes a vector of 
+transcription factor names and plots a graph of their names against their
+validation scores represented by the Ratio_to_Overall_Avg column. The function 
+utilized several functions from the ggplot2 package. Firstly the ggplot function
+was used to create the plot, with that the aes function is used to define 
+each part of the data represented on the plot in terms of colors, shapes, sizes etc.
+Furthermore, the geom_point was used to add the points to the plot and the
+theme_minimal function was used to apply a minimalist theme to the plot. 
+The element_text function was used to customize the appearance of text in the plot.
+Finally the  labs function was used to add labels to the plot and the theme was
+used to  customize these labels.  
+
+The author also wrote the plot_TFs_network function which plots a combined
+graph showing all the transcription factors that regulate the input genes and
+all the target genes regulated by them. The function uses two functions from 
+the igraph package. Firstly the graph_from_data_frame was used to create a graph
+object from a data frame, then the V(graph) function was used to access the nodes
+of the graph object created using the igraph package.
+
+No other aids were used in the generation of this package. 
 
 ## References
 
