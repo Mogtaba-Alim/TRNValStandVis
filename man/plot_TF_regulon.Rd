@@ -13,6 +13,13 @@ plot_TF_regulon(gene_name, max_TFs = 30, max_targets = 30)
 
 \item{max_targets}{An integer limiting the maximum number of target genes shown. Default is NULL, meaning no limit.}
 }
+\value{
+A value of 1 indicating that the plot function has run without any errors.
+
+The output graph shows the input gene and it's target genes in orange
+
+and it's regulating TF's in green. With arrows point from TF to TG.
+}
 \description{
 This function plots a graph showing all the transcription factors (TFs) that regulate a given gene
 and all the target genes regulated by it, with optional limits on the number of TFs and targets shown.

@@ -3,10 +3,16 @@
 #' This function plots the target genes against their TF_TG_Exp_qual_score for a specified Transcription Factor (TF),
 #' considering the frequency of the count and limiting the number of target genes based on max_size.
 #' Each target gene is represented by a different color to form a spectrum.
+#' The TF_TG_Exp_qual_score in the TF_TG_Valid_Comb datasets is a qualitative
+#' score for each TF-TG interaction based on validation across datasets and in
+#' comparison to other TF-TG's in the combined datasets.
 #'
 #' @param tf_name A string specifying the name of the Transcription Factor.
 #' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1.
 #' @param max_size An integer that limits the maximum number of target genes for which scores are plotted. Default is NULL, meaning no limit.
+#'
+#' @return A value of 1 indicating that the plot function has run without any errors
+#'
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 aes
 #' @importFrom ggplot2 geom_point

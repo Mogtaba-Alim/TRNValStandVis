@@ -1,8 +1,16 @@
 #' Plot Validation Scores for Multiple Transcription Factors
 #'
-#' This function takes a vector of Transcription Factor (TF) names and plots a graph of their names against their Validation Scores.
+#' This function takes a vector of Transcription Factor (TF) names and plots a
+#' graph of their names against their Validation Scores. The validation score
+#' is represented by the Ratio_to_Overall_Avg from the TF_Avg_Valid dataset
+#' which is a qualitative value that represents the normalized average
+#' validation quality of a specific TF over all TF-TG interactions in the
+#' combined dataset that involved that TF.
 #'
 #' @param tf_names A vector of strings specifying the names of the Transcription Factors.
+#'
+#' @return A value of 1 indicating that the plot function has run without any errors
+#'
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 aes
 #' @importFrom ggplot2 geom_bar

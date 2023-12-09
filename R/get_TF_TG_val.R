@@ -1,12 +1,17 @@
-#' Retrieve validation score for All Target Genes of a Given TF
+#' Retrieve validation score for all Target Genes(TG) of a given Transcription Factor(TF)
 #'
-#' This function returns the validation score for all target genes of a specified Transcription Factor (TF),
+#' This function returns the validation score for all target genes of a specified franscription factor,
 #' considering the frequency of the count, and limits the number of target genes based on max_size.
+#' The validation score is represented by TF_TG_Exp_qual_score in the TF_TG_Valid_Comb datasets
+#' and is a qualitative score for each TF-TG interaction based on validation across
+#' datasets and in comparison to other TF-TG's in the combined datasets.
 #'
 #' @param tf_name A string specifying the name of the Transcription Factor.
 #' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1. Maximum is 4
 #' @param max_size An integer that limits the maximum number of target genes for which scores are returned. Default is NULL, meaning no limit.
+#'
 #' @return A data frame with columns for target genes and their corresponding TF_TG_Exp_qual_score.
+#'
 #' @importFrom dplyr filter
 #' @importFrom dplyr arrange
 #' @importFrom magrittr %>%

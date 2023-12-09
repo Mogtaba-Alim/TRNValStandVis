@@ -13,6 +13,13 @@ plot_TFs_network(gene_names, max_TFs = 10, max_targets = 10)
 
 \item{max_targets}{An integer limiting the maximum number of target genes shown for each gene. Default is NULL, meaning no limit.}
 }
+\value{
+A value of 1 indicating that the plot function has run without any errors.
+
+The output graph shows the input genex and there target genes in orange
+
+and there regulating TF's in green. With arrows pointing from TF to TG.
+}
 \description{
 This function plots a combined graph showing all the transcription factors (TFs) that regulate up to three given genes
 and all the target genes regulated by them. The input genes, their regulators, and their target genes are colored differently.

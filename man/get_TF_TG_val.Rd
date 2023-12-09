@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_TF_TG_val.R
 \name{get_TF_TG_val}
 \alias{get_TF_TG_val}
-\title{Retrieve validation score for All Target Genes of a Given TF}
+\title{Retrieve validation score for all Target Genes(TG) of a given Transcription Factor(TF)}
 \usage{
 get_TF_TG_val(tf_name, validation_freq = 1, max_size = NULL)
 }
@@ -17,8 +17,11 @@ get_TF_TG_val(tf_name, validation_freq = 1, max_size = NULL)
 A data frame with columns for target genes and their corresponding TF_TG_Exp_qual_score.
 }
 \description{
-This function returns the validation score for all target genes of a specified Transcription Factor (TF),
+This function returns the validation score for all target genes of a specified franscription factor,
 considering the frequency of the count, and limits the number of target genes based on max_size.
+The validation score is represented by TF_TG_Exp_qual_score in the TF_TG_Valid_Comb datasets
+and is a qualitative score for each TF-TG interaction based on validation across
+datasets and in comparison to other TF-TG's in the combined datasets.
 }
 \examples{
 

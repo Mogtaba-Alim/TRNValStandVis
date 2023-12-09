@@ -6,7 +6,9 @@
 #' @param target_gene A string specifying the name of the Target Gene.
 #' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1.
 #' @param max_size An integer that limits the maximum size of the returned vector of TFs. Default is NULL, meaning no limit.
+#'
 #' @return A vector of TFs that regulate the specified Target Gene, limited in size by max_size.
+#'
 #' @examples
 #'
 #' # Gets all the transcription factors of the input gene

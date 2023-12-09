@@ -6,6 +6,11 @@
 #' @param gene_names A vector of up to three gene names.
 #' @param max_TFs An integer limiting the maximum number of TFs shown for each gene. Default is NULL, meaning no limit.
 #' @param max_targets An integer limiting the maximum number of target genes shown for each gene. Default is NULL, meaning no limit.
+#'
+#' @return A value of 1 indicating that the plot function has run without any errors.
+#' @return The output graph shows the input genex and there target genes in orange
+#' @return and there regulating TF's in green. With arrows pointing from TF to TG.
+#'
 #' @importFrom igraph graph_from_data_frame
 #' @importFrom igraph V
 #'

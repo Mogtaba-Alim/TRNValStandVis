@@ -6,6 +6,11 @@
 #' @param gene_name A string specifying the name of the gene.
 #' @param max_TFs An integer limiting the maximum number of TFs shown. Default is NULL, meaning no limit.
 #' @param max_targets An integer limiting the maximum number of target genes shown. Default is NULL, meaning no limit.
+#'
+#' @return A value of 1 indicating that the plot function has run without any errors.
+#' @return The output graph shows the input gene and it's target genes in orange
+#' @return and it's regulating TF's in green. With arrows point from TF to TG.
+#'
 #' @importFrom igraph graph_from_data_frame
 #' @importFrom igraph V
 #' @importFrom igraph layout_with_fr

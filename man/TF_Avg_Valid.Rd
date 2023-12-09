@@ -8,7 +8,7 @@
 A dataframe with 2 columns:
 \describe{
 \item{TF}{Transcription Factor name in HGNC. }
-\item{Ratio_to_Overall_Avg}{Average validation score for all TFs interactions.}
+\item{Ratio_to_Overall_Avg}{Normalized Average validation score for all TFs interactions.}
 
 ...
 }
@@ -17,8 +17,10 @@ A dataframe with 2 columns:
 data(TF_Avg_Valid)
 }
 \description{
-This dataset maps every HGNC standardized TF to its overal avg validation score
-over all it TF-TG interactions
+This dataset maps every HGNC standardized TF to its overall avg validation score
+over all it TF-TG interactions. Ratio_to_Overall_Avg is a qualitative value
+that represents the normalized average validation quality of a specific TF
+over all TF-TG interactions in the combined dataset that involved that TF.
 }
 \examples{
 \dontrun{

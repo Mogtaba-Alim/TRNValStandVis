@@ -13,10 +13,16 @@ plot_TF_TG_val(tf_name, validation_freq = 1, max_size = 30)
 
 \item{max_size}{An integer that limits the maximum number of target genes for which scores are plotted. Default is NULL, meaning no limit.}
 }
+\value{
+A value of 1 indicating that the plot function has run without any errors
+}
 \description{
 This function plots the target genes against their TF_TG_Exp_qual_score for a specified Transcription Factor (TF),
 considering the frequency of the count and limiting the number of target genes based on max_size.
 Each target gene is represented by a different color to form a spectrum.
+The TF_TG_Exp_qual_score in the TF_TG_Valid_Comb datasets is a qualitative
+score for each TF-TG interaction based on validation across datasets and in
+comparison to other TF-TG's in the combined datasets.
 }
 \examples{
 
