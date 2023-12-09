@@ -21,8 +21,16 @@ This function returns a vector of Transcription Factors (TFs) that regulate a sp
 It filters the data based on the Target Gene and a validation frequency, and limits the size of the returned vector.
 }
 \examples{
-get_TFs("Gene1")
-get_TFs("Gene2", validation_freq = 2)
-get_TFs("Gene3", max_size = 5)
+
+# Gets all the transcription factors of the input gene
+get_TFs("CTCF")
+
+# Allows the user to specify the validation frequency of the transcription factors
+# The default value is 1 and the max value is 4.
+get_TFs("CTCF", validation_freq = 2)
+
+# Allows the user to specify the maximum number of transcription factors to return
+# The default value is NULL meaning it returns all the transcription factors.
+get_TFs("CTCF", max_size = 5)
 
 }

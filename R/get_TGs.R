@@ -8,8 +8,17 @@
 #' @param max_size An integer that limits the maximum size of the returned vector of Target Genes. Default is NULL, meaning no limit.
 #' @return A vector of Target Genes associated with the specified TF.
 #' @examples
+#'
+#' # Gets all the regulator genes of the input transcription factor.
 #' get_TGs("CTCF")
+#'
+#' # Allows the user to specify the validation frequency of the target genes.
+#' # The default value is 1 and the max value is 4.
 #' get_TGs("CTCF", validation_freq = 2)
+#'
+#' # Allows the user to specify the maximum number of target genes to return
+#' # The default value is NULL meaning it returns all the target genes.
+#' get_TGs("CTCF", max_size = 15)
 #'
 #' @export
 get_TGs <- function(tf_name, validation_freq = 1, max_size = NULL) {

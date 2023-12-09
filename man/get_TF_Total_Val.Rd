@@ -17,6 +17,8 @@ This function returns the Ratio_to_Overall_Avg score for a specified Transcripti
 from the tf_metrics dataset.
 }
 \examples{
+
+# Gets the normalized average validation score for a specific TF.
 get_TF_Total_Val("CTCF")
 
 }

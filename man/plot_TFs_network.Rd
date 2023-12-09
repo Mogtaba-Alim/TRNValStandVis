@@ -4,7 +4,7 @@
 \alias{plot_TFs_network}
 \title{Plot Combined Regulation Graph for Up to Three Genes}
 \usage{
-plot_TFs_network(gene_names, max_TFs = NULL, max_targets = NULL)
+plot_TFs_network(gene_names, max_TFs = 10, max_targets = 10)
 }
 \arguments{
 \item{gene_names}{A vector of up to three gene names.}
@@ -18,7 +18,14 @@ This function plots a combined graph showing all the transcription factors (TFs)
 and all the target genes regulated by them. The input genes, their regulators, and their target genes are colored differently.
 }
 \examples{
+
+# Plots the combined regulons of the input array of genes. Shows the
+# transcription factors that act on the genes as well as the target genes.
 plot_TFs_network(c("CTCF", "GATA1"))
+
+# Allows the user to specify the maximum number of transcription factors for
+# each gene using max_TFs with a default value of 10 and a maximum number of
+# target genes for each input gene with a default value of 10.
 plot_TFs_network(c("CTCF", "GATA1", "STAT1"), max_TFs = 10, max_targets = 10)
 
 }

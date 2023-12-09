@@ -16,12 +16,19 @@
 #' @importFrom ggplot2 element_text
 #'
 #' @examples
+#'
+#' # Plot the validation score of the target genes of the input TF.
 #' plot_TF_TG_val("CTCF")
+#'
+#' # Allow the user to specify the validation frequency of the target genes
+#' # that are to be displayed, a number between 1 and 4. Also allows the user
+#' # to specify the number of target genes to show using max_size. The default
+#' # value is 30 to optimize the graph visual.
 #' plot_TF_TG_val("CTCF", validation_freq = 2, max_size = 10)
 #'
 #'
 #' @export
-plot_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = NULL) {
+plot_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = 30) {
   data(TF_TG_Valid_Comb, package = "TRNValStandVis")
 
   # Validate tf_name (assuming valid_TFs is the unique TFs in TF_TG_Valid_Comb)

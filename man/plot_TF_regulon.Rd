@@ -4,7 +4,7 @@
 \alias{plot_TF_regulon}
 \title{Plot Regulation Graph for a Gene with Size Limits}
 \usage{
-plot_TF_regulon(gene_name, max_TFs = NULL, max_targets = NULL)
+plot_TF_regulon(gene_name, max_TFs = 30, max_targets = 30)
 }
 \arguments{
 \item{gene_name}{A string specifying the name of the gene.}
@@ -18,7 +18,13 @@ This function plots a graph showing all the transcription factors (TFs) that reg
 and all the target genes regulated by it, with optional limits on the number of TFs and targets shown.
 }
 \examples{
+# Plots the regulon of the gene CTCF showing it's regulators and targets
 plot_TF_regulon("CTCF")
+
+# Allows you to specify the maximum number of regulators and targets.
+# The default is 30 genes for each to create the optimum output.
+# There is no maximum and if the value set is greater than the available
+# genes then all available genes are plotted.
 plot_TF_regulon("CTCF", max_TFs = 10, max_targets = 10)
 
 }

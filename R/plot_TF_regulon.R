@@ -8,12 +8,20 @@
 #' @param max_targets An integer limiting the maximum number of target genes shown. Default is NULL, meaning no limit.
 #' @importFrom igraph graph_from_data_frame
 #' @importFrom igraph V
+#' @importFrom igraph layout_with_fr
+#'
 #' @examples
+#' # Plots the regulon of the gene CTCF showing it's regulators and targets
 #' plot_TF_regulon("CTCF")
+#'
+#' # Allows you to specify the maximum number of regulators and targets.
+#' # The default is 30 genes for each to create the optimum output.
+#' # There is no maximum and if the value set is greater than the available
+#' # genes then all available genes are plotted.
 #' plot_TF_regulon("CTCF", max_TFs = 10, max_targets = 10)
 #'
 #' @export
-plot_TF_regulon <- function(gene_name, max_TFs = NULL, max_targets = NULL) {
+plot_TF_regulon <- function(gene_name, max_TFs = 30, max_targets = 30) {
   # Ensure the package data is loaded
   data(TF_TG_Valid_Comb, package = "TRNValStandVis")
 
@@ -27,14 +35,14 @@ plot_TF_regulon <- function(gene_name, max_TFs = NULL, max_targets = NULL) {
 
   # Validate max_TFs
   if (!is.null(max_TFs) && (!is.numeric(max_TFs) || max_TFs < 0)) {
-    warning("max_TFs must be a non-negative integer. Ignoring max_TFs and proceeding without a limit.")
-    max_TFs <- NULL
+    warning("max_TFs must be a non-negative integer. Ignoring max_TFs and proceeding with default limit.")
+    max_TFs <- 30
   }
 
   # Validate max_targets
   if (!is.null(max_targets) && (!is.numeric(max_targets) || max_targets < 0)) {
-    warning("max_targets must be a non-negative integer. Ignoring max_targets and proceeding without a limit.")
-    max_targets <- NULL
+    warning("max_targets must be a non-negative integer. Ignoring max_targets and proceeding with default limit.")
+    max_targets <- 30
   }
 
   # Extract TFs regulating the gene and apply max_TFs limit if specified
@@ -61,8 +69,17 @@ plot_TF_regulon <- function(gene_name, max_TFs = NULL, max_targets = NULL) {
   igraph::V(graph)$color <- ifelse(names(igraph::V(graph)) == gene_name, "red",
                                    ifelse(names(igraph::V(graph)) %in% regulating_TFs, "orange", "green"))
 
-  # Plot the graph
-  plot(graph, edge.arrow.size = 0.5)
+  # Choose a layout that spaces nodes more
+  layout <- igraph::layout_with_fr(graph)
+
+
+  # Plot the graph with title and improved layout
+  plot(graph, layout = layout, edge.arrow.size = 0.5, main = "Transcription Factor Regulon",
+       vertex.label.cex = 0.7)
+
+  # Add a legend to the plot (adjust position and size)
+  legend("topright", inset = c(0, -0.02), legend = c("Gene", "Regulator", "Target"),
+         col = c("red", "orange", "green"), pch = 21, pt.cex = 1, cex = 0.7, box.lty=0)
 }
 
 

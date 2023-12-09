@@ -13,6 +13,7 @@ plot_TF_total_val(tf_names)
 This function takes a vector of Transcription Factor (TF) names and plots a graph of their names against their Validation Scores.
 }
 \examples{
+# Plots the the normalized average validation score for an input array of TFs.
 plot_TF_total_val(c("CTCF", "GATA1", "AHR", "AHRR", "BDP1"))
 
 }

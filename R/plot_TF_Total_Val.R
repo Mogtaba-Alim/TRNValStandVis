@@ -13,6 +13,7 @@
 #'
 #'
 #' @examples
+#' # Plots the the normalized average validation score for an input array of TFs.
 #' plot_TF_total_val(c("CTCF", "GATA1", "AHR", "AHRR", "BDP1"))
 #'
 #' @export

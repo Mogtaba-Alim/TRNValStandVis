@@ -11,14 +11,25 @@
 #'
 #'
 #' @examples
+#'
+#' # Plots the combined regulons of the input array of genes. Shows the
+#' # transcription factors that act on the genes as well as the target genes.
 #' plot_TFs_network(c("CTCF", "GATA1"))
+#'
+#' # Allows the user to specify the maximum number of transcription factors for
+#' # each gene using max_TFs with a default value of 10 and a maximum number of
+#' # target genes for each input gene with a default value of 10.
 #' plot_TFs_network(c("CTCF", "GATA1", "STAT1"), max_TFs = 10, max_targets = 10)
 #'
 #' @export
-plot_TFs_network <- function(gene_names, max_TFs = NULL, max_targets = NULL) {
+plot_TFs_network <- function(gene_names, max_TFs = 10, max_targets = 10) {
   # Validate gene_names length
   if (length(gene_names) > 3) {
     stop("Maximum of 3 genes are allowed.")
+  }
+
+  if (length(gene_names) < 1) {
+    stop("Empty input gene array.")
   }
 
   # Load your package data
@@ -33,13 +44,13 @@ plot_TFs_network <- function(gene_names, max_TFs = NULL, max_targets = NULL) {
 
   # Validate max_TFs
   if (!is.null(max_TFs) && (!is.numeric(max_TFs) || max_TFs < 0)) {
-    warning("max_TFs must be a non-negative integer. Ignoring max_TFs and proceeding without a limit.")
-    max_TFs <- NULL
+    warning("max_TFs must be a non-negative integer. Ignoring max_TFs and proceeding with default limit.")
+    max_TFs <- 10
   }
 
   # Validate max_targets
   if (!is.null(max_targets) && (!is.numeric(max_targets) || max_targets < 0)) {
-    warning("max_targets must be a non-negative integer. Ignoring max_targets and proceeding without a limit.")
+    warning("max_targets must be a non-negative integer. Ignoring max_targets and proceeding with default limit.")
     max_targets <- NULL
   }
 

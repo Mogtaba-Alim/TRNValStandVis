@@ -9,7 +9,7 @@ get_TF_TG_val(tf_name, validation_freq = 1, max_size = NULL)
 \arguments{
 \item{tf_name}{A string specifying the name of the Transcription Factor.}
 
-\item{validation_freq}{A numeric value representing the validation frequency threshold. Default is 1.}
+\item{validation_freq}{A numeric value representing the validation frequency threshold. Default is 1. Maximum is 4}
 
 \item{max_size}{An integer that limits the maximum number of target genes for which scores are returned. Default is NULL, meaning no limit.}
 }
@@ -21,7 +21,13 @@ This function returns the validation score for all target genes of a specified T
 considering the frequency of the count, and limits the number of target genes based on max_size.
 }
 \examples{
+
+# Gets all the target genes of the input gene and there validation score
 get_TF_TG_val("CTCF")
+
+# Gets the target genes of the input gene. Allows the user to specify
+# the validation frequency between 1 and 4 and the max_size indicating the
+# number of targets to show. If set to NULL will return all the targets
 get_TF_TG_val("CTCF", validation_freq = 3, max_size = 10)
 
 }

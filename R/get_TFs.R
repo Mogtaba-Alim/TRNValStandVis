@@ -8,9 +8,17 @@
 #' @param max_size An integer that limits the maximum size of the returned vector of TFs. Default is NULL, meaning no limit.
 #' @return A vector of TFs that regulate the specified Target Gene, limited in size by max_size.
 #' @examples
-#' get_TFs("Gene1")
-#' get_TFs("Gene2", validation_freq = 2)
-#' get_TFs("Gene3", max_size = 5)
+#'
+#' # Gets all the transcription factors of the input gene
+#' get_TFs("CTCF")
+#'
+#' # Allows the user to specify the validation frequency of the transcription factors
+#' # The default value is 1 and the max value is 4.
+#' get_TFs("CTCF", validation_freq = 2)
+#'
+#' # Allows the user to specify the maximum number of transcription factors to return
+#' # The default value is NULL meaning it returns all the transcription factors.
+#' get_TFs("CTCF", max_size = 5)
 #'
 #' @export
 get_TFs <- function(target_gene, validation_freq = 1, max_size = NULL) {

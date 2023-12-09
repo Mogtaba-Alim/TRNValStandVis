@@ -6,6 +6,8 @@
 #' @param tf_name A string specifying the name of the Transcription Factor.
 #' @return The Ratio_to_Overall_Avg score for the specified TF.
 #' @examples
+#'
+#' # Gets the normalized average validation score for a specific TF.
 #' get_TF_Total_Val("CTCF")
 #'
 #' @export

@@ -4,7 +4,7 @@
 \alias{plot_TF_TG_val}
 \title{Plot Target Gene Validation Scores for a Given TF with Frequency and Size Filters}
 \usage{
-plot_TF_TG_val(tf_name, validation_freq = 1, max_size = NULL)
+plot_TF_TG_val(tf_name, validation_freq = 1, max_size = 30)
 }
 \arguments{
 \item{tf_name}{A string specifying the name of the Transcription Factor.}
@@ -19,7 +19,14 @@ considering the frequency of the count and limiting the number of target genes b
 Each target gene is represented by a different color to form a spectrum.
 }
 \examples{
+
+# Plot the validation score of the target genes of the input TF.
 plot_TF_TG_val("CTCF")
+
+# Allow the user to specify the validation frequency of the target genes
+# that are to be displayed, a number between 1 and 4. Also allows the user
+# to specify the number of target genes to show using max_size. The default
+# value is 30 to optimize the graph visual.
 plot_TF_TG_val("CTCF", validation_freq = 2, max_size = 10)
 
 
