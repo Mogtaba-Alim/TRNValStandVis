@@ -14,12 +14,13 @@ RoxygenNote: 7.2.3
 Suggests: 
     knitr,
     rmarkdown,
-    testthaat,
+    testthat,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
     dplyr,
     ggplot2,
-    igraph
+    igraph,
+    magrittr
 VignetteBuilder: knitr
 LazyData: true

@@ -79,6 +79,38 @@ browseVignettes("TRNValStandVis")
 8. ***plot_TF_total_val***
 - Take in a collection of TF names and plots their average validity score
 
+Below is an example overview of the visualization features available with this package:
+
+<div style="text-align: center;">
+  <table>
+    <tr>
+      <td>
+        ![1. plot_TF_regulon](`r system.file("./inst/extdata", "plot_TF_regulon_.png", package = "TRNValStandVis")`)
+        <br>
+        <em>Explanation for Image 1: [Your two-sentence explanation here.]</em>
+      </td>
+      <td>
+        ![2. plot_TF_regulon](`r system.file("./inst/extdata", "plot_TF_TG_val_Example.png", package = "TRNValStandVis")`)
+        <br>
+        <em>Explanation for Image 2: [Your two-sentence explanation here.]</em>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        ![3. plot_TF_regulon](`r system.file("./inst/extdata", "plot_TF_total_val_Example.png", package = "TRNValStandVis")`)
+        <br>
+        <em>Explanation for Image 3: [Your two-sentence explanation here.]</em>
+      </td>
+      <td>
+        ![4. plot_TF_regulon](`r system.file("./inst/extdata", "plot_TFs_network_Example.png", package = "TRNValStandVis")`)
+        <br>
+        <em>Explanation for Image 4: [Your two-sentence explanation here.]</em>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
 The packcage will also have 2 datasets. The first  will be the combined dataset of TF-TG's
 and will contain columns for the number of times an interaction has appeared in the
 different datasets, the validation score for each TF-TG and a normalized validation score. 

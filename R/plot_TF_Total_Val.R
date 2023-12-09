@@ -44,6 +44,8 @@ plot_TF_total_val <- function(tf_names) {
     ggplot2::labs(title = "TF Validation Scores", x = "Transcription Factor", y = "Validation Score") +
     ggplot2::theme_minimal() +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1))  # Adjust text angle for better readability
+
+  return(1)
 }
 
 # [END]

@@ -70,6 +70,8 @@ plot_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = 30) {
                   x = "Target Gene",
                   y = "Validation Score") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, hjust = 1))  # Adjust text angle for better readability if many genes
+
+  return(1)
 }
 
 

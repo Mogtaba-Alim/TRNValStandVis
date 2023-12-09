@@ -48,42 +48,70 @@ browseVignettes("TRNValStandVis")
 
 1.  ***get_TGs***
 
--   Take in a TF and return all its target genes. Can be adjusted based
-    on number of datasets TF-TG appears in.
+- Take in a TF and return all its target genes. Can be adjusted based on
+  number of datasets TF-TG appears in.
 
 2.  ***get_TFs***
 
--   Take in a gene and return all the transcription factors that
-    regulate it. Can be adjusted based on number of datasets TF-TG
-    appears in.
+- Take in a gene and return all the transcription factors that regulate
+  it. Can be adjusted based on number of datasets TF-TG appears in.
 
 3.  ***plot_TF_regulon***
 
--   Take in a gene and plot that gene’s regulon including regulators and
-    targets.
+- Take in a gene and plot that gene’s regulon including regulators and
+  targets.
 
 4.  ***plot_TFs_network***
 
--   Take in up to 3 gene names and plot the network involving all the
-    genes regulons combined.
+- Take in up to 3 gene names and plot the network involving all the
+  genes regulons combined.
 
 5.  ***get_TF_TG_val***
 
--   Take in a TF and return the validity score for all the TG’s of that
-    TF
+- Take in a TF and return the validity score for all the TG’s of that TF
 
 6.  ***plot_TF_TG_val***
 
--   Take in a TF and plot the validity score for all the TG’s of that TF
+- Take in a TF and plot the validity score for all the TG’s of that TF
 
 7.  ***get_TF_total_val***
 
--   Takes in a TF and provides the average validty score for that TF
+- Takes in a TF and provides the average validty score for that TF
 
 8.  ***plot_TF_total_val***
 
--   Take in a collection of TF names and plots their average validity
-    score
+- Take in a collection of TF names and plots their average validity
+  score
+
+Below is an example overview of the visualization features available
+with this package:
+
+<div style="text-align: center;">
+
+<table>
+<tr>
+<td>
+![1. plot_TF_regulon]() <br> <em>Explanation for Image 1: \[Your
+two-sentence explanation here.\]</em>
+</td>
+<td>
+![2. plot_TF_regulon]() <br> <em>Explanation for Image 2: \[Your
+two-sentence explanation here.\]</em>
+</td>
+</tr>
+<tr>
+<td>
+![3. plot_TF_regulon]() <br> <em>Explanation for Image 3: \[Your
+two-sentence explanation here.\]</em>
+</td>
+<td>
+![4. plot_TF_regulon]() <br> <em>Explanation for Image 4: \[Your
+two-sentence explanation here.\]</em>
+</td>
+</tr>
+</table>
+
+</div>
 
 The packcage will also have 2 datasets. The first will be the combined
 dataset of TF-TG’s and will contain columns for the number of times an

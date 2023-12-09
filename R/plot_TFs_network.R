@@ -94,7 +94,12 @@ plot_TFs_network <- function(gene_names, max_TFs = 10, max_targets = 10) {
                                    ifelse(names(igraph::V(graph)) %in% all_TFs, "orange", "green"))
 
   # Plot the graph
-  plot(graph, vertex.color = igraph::V(graph)$color, edge.arrow.size = 0.5)
+  plot(graph, vertex.color = igraph::V(graph)$color, edge.arrow.size = 0.5,
+       main = "Transcription Factor's Regulatory Network", vertex.label.cex = 0.7)
+
+  # Add a legend to the plot (adjust position and size)
+  legend("topright", inset = c(0, -0.02), legend = c("Gene", "Regulator", "Target"),
+         col = c("red", "orange", "green"), pch = 21, pt.cex = 1, cex = 0.7, box.lty=0)
 
   return(1)
 }

@@ -85,6 +85,8 @@ plot_TF_regulon <- function(gene_name, max_TFs = 30, max_targets = 30) {
   # Add a legend to the plot (adjust position and size)
   legend("topright", inset = c(0, -0.02), legend = c("Gene", "Regulator", "Target"),
          col = c("red", "orange", "green"), pch = 21, pt.cex = 1, cex = 0.7, box.lty=0)
+
+  return(1)
 }
 
 
