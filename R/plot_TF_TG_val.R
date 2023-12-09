@@ -11,7 +11,7 @@
 #' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1. Maximum is 4.
 #' @param max_size An integer that limits the maximum number of target genes for which scores are plotted. Default is 30, for optimal visualization.
 #'
-#' @return A value of 1 indicating that the plot function has run without any errors
+#' @return The plot graph.
 #'
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 aes
@@ -63,15 +63,14 @@ plot_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = 30) {
   }
 
   # Plotting
-  ggplot2::ggplot(filtered_data, ggplot2::aes(x = Target_Gene, y = TF_TG_Exp_qual_score, color = Target_Gene)) +
+  return(ggplot2::ggplot(filtered_data, ggplot2::aes(x = Target_Gene, y = TF_TG_Exp_qual_score, color = Target_Gene)) +
     ggplot2::geom_point() +
     ggplot2::scale_color_viridis_d() +
     ggplot2::labs(title = paste(tf_name, "Target Gene Validation Scores"),
                   x = "Target Gene",
                   y = "Validation Score") +
-    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, hjust = 1))  # Adjust text angle for better readability if many genes
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, hjust = 1, face = "italic" )))  # Adjust text angle for better readability if many genes
 
-  return(1)
 }
 
 

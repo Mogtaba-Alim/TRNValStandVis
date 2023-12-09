@@ -9,7 +9,7 @@
 #'
 #' @param tf_names A vector of strings specifying the names of the Transcription Factors.
 #'
-#' @return A value of 1 indicating that the plot function has run without any errors
+#' @return The plot graph.
 #'
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 aes
@@ -39,13 +39,12 @@ plot_TF_total_val <- function(tf_names) {
   filtered_data <- TF_Avg_Valid[TF_Avg_Valid$TF %in% tf_names, ]
 
   # Plotting
-  ggplot2::ggplot(filtered_data, ggplot2::aes(x = TF, y = Ratio_to_Overall_Avg, fill = TF)) +
+  return(ggplot2::ggplot(filtered_data, ggplot2::aes(x = TF, y = Ratio_to_Overall_Avg, fill = TF)) +
     ggplot2::geom_bar(stat = "identity") +
     ggplot2::labs(title = "TF Validation Scores", x = "Transcription Factor", y = "Validation Score") +
     ggplot2::theme_minimal() +
-    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1, face = "italic" ))  # Adjust text angle for better readability
+    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1, face = "italic" )))  # Adjust text angle for better readability
 
-  return(1)
 }
 
 # [END]
