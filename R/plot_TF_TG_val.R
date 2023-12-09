@@ -49,7 +49,7 @@ plot_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = 30) {
   }
 
   # Validate max_size
-  if (!is.null(max_size) && (!is.numeric(max_size) || max_size < 0)) {
+  if (!is.null(max_size) && (!is.numeric(max_size) || max_size < 1)) {
     warning("max_size must be a non-negative integer. Ignoring max_size and proceeding with available data.")
     max_size <- NULL
   }

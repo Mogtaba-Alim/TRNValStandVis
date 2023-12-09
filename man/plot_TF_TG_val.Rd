@@ -14,7 +14,7 @@ plot_TF_TG_val(tf_name, validation_freq = 1, max_size = 30)
 \item{max_size}{An integer that limits the maximum number of target genes for which scores are plotted. Default is 30, for optimal visualization.}
 }
 \value{
-A value of 1 indicating that the plot function has run without any errors
+The plot graph.
 }
 \description{
 This function plots the target genes against their TF_TG_Exp_qual_score for a specified Transcription Factor (TF),

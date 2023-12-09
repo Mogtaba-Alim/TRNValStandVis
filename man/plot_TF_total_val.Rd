@@ -10,7 +10,7 @@ plot_TF_total_val(tf_names)
 \item{tf_names}{A vector of strings specifying the names of the Transcription Factors.}
 }
 \value{
-A value of 1 indicating that the plot function has run without any errors
+The plot graph.
 }
 \description{
 This function takes a vector of Transcription Factor (TF) names and plots a

@@ -45,7 +45,7 @@ get_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = NULL) {
   }
 
   # Validate max_size
-  if (!is.null(max_size) && (!is.numeric(max_size) || max_size < 0)) {
+  if (!is.null(max_size) && (!is.numeric(max_size) || max_size < 1)) {
     warning("max_size must be a non-negative integer. Ignoring max_size and proceeding without a limit.")
     max_size <- NULL
   }

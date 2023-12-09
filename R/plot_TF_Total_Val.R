@@ -28,6 +28,10 @@
 plot_TF_total_val <- function(tf_names) {
   data(TF_Avg_Valid, package = "TRNValStandVis")
 
+  if (length(tf_names) < 1) {
+    stop("Empty input vector.")
+  }
+
   # Validate tf_names (check if they are in the dataset)
   valid_TFs <- unique(TF_Avg_Valid$TF)
   invalid_TFs <- setdiff(tf_names, valid_TFs)

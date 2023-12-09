@@ -50,15 +50,15 @@ plot_TFs_network <- function(gene_names, max_TFs = 10, max_targets = 10) {
   }
 
   # Validate max_TFs
-  if (!is.null(max_TFs) && (!is.numeric(max_TFs) || max_TFs < 0)) {
+  if (!is.null(max_TFs) && (!is.numeric(max_TFs) || max_TFs < 1)) {
     warning("max_TFs must be a non-negative integer. Ignoring max_TFs and proceeding with default limit.")
     max_TFs <- 10
   }
 
   # Validate max_targets
-  if (!is.null(max_targets) && (!is.numeric(max_targets) || max_targets < 0)) {
+  if (!is.null(max_targets) && (!is.numeric(max_targets) || max_targets < 1)) {
     warning("max_targets must be a non-negative integer. Ignoring max_targets and proceeding with default limit.")
-    max_targets <- NULL
+    max_targets <- 10
   }
 
   edges <- data.frame(from = character(), to = character())

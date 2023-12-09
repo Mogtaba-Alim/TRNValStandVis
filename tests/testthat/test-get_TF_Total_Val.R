@@ -1,4 +1,3 @@
-testthat::context("Tests for get_TF_Total_Val function")
 library(TRNValStandVis)
 
 # Test with a known TF
