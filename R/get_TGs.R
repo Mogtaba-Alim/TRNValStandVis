@@ -4,7 +4,7 @@
 #' It filters the data based on the TF name and a validation frequency.
 #'
 #' @param tf_name A string specifying the name of the Transcription Factor.
-#' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1.
+#' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1. Maximum is 4
 #' @param max_size An integer that limits the maximum size of the returned vector of Target Genes. Default is NULL, meaning no limit.
 #'
 #' @return A vector of Target Genes associated with the specified TF.

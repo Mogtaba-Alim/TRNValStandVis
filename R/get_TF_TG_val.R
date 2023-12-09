@@ -61,7 +61,7 @@ get_TF_TG_val <- function(tf_name, validation_freq = 1, max_size = NULL) {
   }
 
   # Return the relevant columns
-  return(filtered_data[, c('Target_Gene', 'TF_TG_Exp_qual_score')])
+  return(filtered_data[, c("Target_Gene", "TF_TG_Exp_qual_score")])
 }
 
 # [END]

@@ -4,8 +4,8 @@
 #' and all the target genes regulated by it, with optional limits on the number of TFs and targets shown.
 #'
 #' @param gene_name A string specifying the name of the gene.
-#' @param max_TFs An integer limiting the maximum number of TFs shown. Default is NULL, meaning no limit.
-#' @param max_targets An integer limiting the maximum number of target genes shown. Default is NULL, meaning no limit.
+#' @param max_TFs An integer limiting the maximum number of TFs shown. Default is 30, for optimal visualization.
+#' @param max_targets An integer limiting the maximum number of target genes shown. Default is 30, for optimal visualization.
 #'
 #' @return A value of 1 indicating that the plot function has run without any errors.
 #' @return The output graph shows the input gene and it's target genes in orange

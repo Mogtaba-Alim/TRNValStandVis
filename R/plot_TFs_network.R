@@ -3,9 +3,9 @@
 #' This function plots a combined graph showing all the transcription factors (TFs) that regulate up to three given genes
 #' and all the target genes regulated by them. The input genes, their regulators, and their target genes are colored differently.
 #'
-#' @param gene_names A vector of up to three gene names.
-#' @param max_TFs An integer limiting the maximum number of TFs shown for each gene. Default is NULL, meaning no limit.
-#' @param max_targets An integer limiting the maximum number of target genes shown for each gene. Default is NULL, meaning no limit.
+#' @param gene_names A vector of up to three gene names. Set to 3 genes for optimal visualization.
+#' @param max_TFs An integer limiting the maximum number of TFs shown for each gene. Default is 10, for optimal visualization.
+#' @param max_targets An integer limiting the maximum number of target genes shown for each gene. Default is 10, for optimal visualization.
 #'
 #' @return A value of 1 indicating that the plot function has run without any errors.
 #' @return The output graph shows the input genex and there target genes in orange
@@ -28,7 +28,9 @@
 #'
 #' @export
 plot_TFs_network <- function(gene_names, max_TFs = 10, max_targets = 10) {
+
   # Validate gene_names length
+  # Limited to 3 in order for visualization to be optimal
   if (length(gene_names) > 3) {
     stop("Maximum of 3 genes are allowed.")
   }

@@ -8,8 +8,8 @@
 #' comparison to other TF-TG's in the combined datasets.
 #'
 #' @param tf_name A string specifying the name of the Transcription Factor.
-#' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1.
-#' @param max_size An integer that limits the maximum number of target genes for which scores are plotted. Default is NULL, meaning no limit.
+#' @param validation_freq A numeric value representing the validation frequency threshold. Default is 1. Maximum is 4.
+#' @param max_size An integer that limits the maximum number of target genes for which scores are plotted. Default is 30, for optimal visualization.
 #'
 #' @return A value of 1 indicating that the plot function has run without any errors
 #'
