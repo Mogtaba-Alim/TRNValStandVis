@@ -91,26 +91,26 @@ with this package:
 <table>
 <tr>
 <td>
-![](inst/extdata/plot_TF_regulon_Example.png) <br> <em>1.
+![](./inst/extdata/plot_TF_regulon_Example.png) <br> <em>1.
 plot_tf_regulon: \[Plots a graph showing all the TF’s that regulate a
 given gene and all the TG’s regulated by it.\]</em>
 </td>
 <td>
-![](inst/extdata/plot_TF_TG_val_Example.png) <br> <em>Explanation for
+![](./inst/extdata/plot_TF_TG_val_Example.png) <br> <em>Explanation for
 Image 2: \[This function plots the target genes against their
 TF_TG_Exp_qual_score for a specified Transcription Factor (TF).\]</em>
 </td>
 </tr>
 <tr>
 <td>
-![](inst/extdata/plot_TF_total_val_Example.png) <br> <em>Explanation for
-Image 3: \[This function takes a vector of Transcription Factor (TF)
+![](./inst/extdata/plot_TF_total_val_Example.png) <br> <em>Explanation
+for Image 3: \[This function takes a vector of Transcription Factor (TF)
 names and plots a graph of their names against their Validation
 Scores.\]</em>
 </td>
 <td>
-![](inst/extdata/plot_TFs_network_Example.png) <br> <em>Explanation for
-Image 4: \[This function plots a combined graph showing all the
+![](./inst/extdata/plot_TFs_network_Example.png) <br> <em>Explanation
+for Image 4: \[This function plots a combined graph showing all the
 transcription factors (TFs) that regulate the input genes and all the
 target genes regulated by them.\]</em>
 </td>
