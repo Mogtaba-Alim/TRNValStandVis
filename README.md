@@ -95,18 +95,24 @@ with this package:
 two-sentence explanation here.\]</em>
 </td>
 <td>
-![2. plot_TF_regulon]() <br> <em>Explanation for Image 2: \[Your
-two-sentence explanation here.\]</em>
+![2.
+plot_TF_regulon](/private/var/folders/kc/38g1669d0nl88m5qg06psg3w0000gn/T/RtmpD3ehRX/temp_libpathbfa36675231d/TRNValStandVis/extdata/plot_TF_TG_val_Example.png)
+<br> <em>Explanation for Image 2: \[Your two-sentence explanation
+here.\]</em>
 </td>
 </tr>
 <tr>
 <td>
-![3. plot_TF_regulon]() <br> <em>Explanation for Image 3: \[Your
-two-sentence explanation here.\]</em>
+![3.
+plot_TF_regulon](/private/var/folders/kc/38g1669d0nl88m5qg06psg3w0000gn/T/RtmpD3ehRX/temp_libpathbfa36675231d/TRNValStandVis/extdata/plot_TF_total_val_Example.png)
+<br> <em>Explanation for Image 3: \[Your two-sentence explanation
+here.\]</em>
 </td>
 <td>
-![4. plot_TF_regulon]() <br> <em>Explanation for Image 4: \[Your
-two-sentence explanation here.\]</em>
+![4.
+plot_TF_regulon](/private/var/folders/kc/38g1669d0nl88m5qg06psg3w0000gn/T/RtmpD3ehRX/temp_libpathbfa36675231d/TRNValStandVis/extdata/plot_TFs_network_Example.png)
+<br> <em>Explanation for Image 4: \[Your two-sentence explanation
+here.\]</em>
 </td>
 </tr>
 </table>

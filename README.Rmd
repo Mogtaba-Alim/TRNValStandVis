@@ -85,24 +85,24 @@ Below is an example overview of the visualization features available with this p
   <table>
     <tr>
       <td>
-        ![1. plot_TF_regulon](`r system.file("./inst/extdata", "plot_TF_regulon_.png", package = "TRNValStandVis")`)
+        ![1. plot_TF_regulon](`r system.file("extdata", "plot_TF_regulon_.png", package = "TRNValStandVis")`)
         <br>
         <em>Explanation for Image 1: [Your two-sentence explanation here.]</em>
       </td>
       <td>
-        ![2. plot_TF_regulon](`r system.file("./inst/extdata", "plot_TF_TG_val_Example.png", package = "TRNValStandVis")`)
+        ![2. plot_TF_regulon](`r system.file("extdata", "plot_TF_TG_val_Example.png", package = "TRNValStandVis")`)
         <br>
         <em>Explanation for Image 2: [Your two-sentence explanation here.]</em>
       </td>
     </tr>
     <tr>
       <td>
-        ![3. plot_TF_regulon](`r system.file("./inst/extdata", "plot_TF_total_val_Example.png", package = "TRNValStandVis")`)
+        ![3. plot_TF_regulon](`r system.file("extdata", "plot_TF_total_val_Example.png", package = "TRNValStandVis")`)
         <br>
         <em>Explanation for Image 3: [Your two-sentence explanation here.]</em>
       </td>
       <td>
-        ![4. plot_TF_regulon](`r system.file("./inst/extdata", "plot_TFs_network_Example.png", package = "TRNValStandVis")`)
+        ![4. plot_TF_regulon](`r system.file("extdata", "plot_TFs_network_Example.png", package = "TRNValStandVis")`)
         <br>
         <em>Explanation for Image 4: [Your two-sentence explanation here.]</em>
       </td>
