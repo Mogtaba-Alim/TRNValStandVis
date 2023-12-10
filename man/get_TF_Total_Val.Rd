@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_TF_Total_Val.R
 \name{get_TF_Total_Val}
 \alias{get_TF_Total_Val}
-\title{Retrieve Score for a Given Transcription Factor from tf_metrics}
+\title{Retrieve Score for a Given Transcription Factor from TF_Avg_Valid}
 \usage{
 get_TF_Total_Val(tf_name)
 }

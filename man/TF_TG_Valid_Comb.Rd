@@ -27,7 +27,8 @@ even in alternate nomenclatures was removed. Based on the count of appearance
 of a TF-TG in the datasets a validation score was created.
 TF_TG_Exp_qual_score is a qualitative score for each TF-TG interaction based
 on validation across datasets and in comparison to other TF-TG's in the
-combined datasets.
+combined datasets. Ratio_to_TF_Avg is a normalized validation score based on
+each TF_TG_Exp_qual_score relative to that for all the the scores for that TF.
 }
 \details{
 Description of the dataset.

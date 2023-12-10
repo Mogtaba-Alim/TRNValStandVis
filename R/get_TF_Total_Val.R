@@ -1,4 +1,4 @@
-#' Retrieve Score for a Given Transcription Factor from tf_metrics
+#' Retrieve Score for a Given Transcription Factor from TF_Avg_Valid
 #'
 #' This function returns the Ratio_to_Overall_Avg score for a specified Transcription Factor (TF)
 #' from the TF_Avg_Valid dataset. The Ratio_to_Overall_Avg is qualitative value

@@ -1,0 +1,12 @@
+citHeader("To cite TRNValStandVis in publications use:")
+
+citEntry(entry = "Unpublished",
+  title        = "TRNValStandVis: An R package for validation, standardization and visualization of transcription factor - target gene interactions. ",
+  author       = "Mogtaba Alim",
+  note         = "Unpublished",
+  year         = "2023",
+
+  textVersion  =
+  paste("Alim, M. (2023) TRNValStandVis: An R package for validation, standardization and visualization of transcription factor - target gene
+          interactions. Unpublished. URL https://github.com/Mogtaba-Alim/TRNValStandVis.")
+)

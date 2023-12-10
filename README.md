@@ -3,6 +3,9 @@
 
 # TRNValStandVis
 
+An R package for validation, standardization and visualization of
+transcription factor - target gene interactions.
+
 <!-- badges: start -->
 <!-- badges: end -->
 
@@ -215,50 +218,73 @@ graph_from_data_frame was used to create a graph object from a data
 frame, then the V(graph) function was used to access the nodes of the
 graph object created using the igraph package.
 
+Other packages used outside functions include the testthat package which
+was used to test the functions of the package. Furthermore, the knittr
+package was used to parse the vingettes file along with the rmarkdown
+package.
+
 No other aids were used in the generation of this package.
 
 ## References
 
-Wickham H, François R, Henry L, Müller K, Vaughan D (2023). *dplyr: A
-Grammar of Data Manipulation*. R package version 1.1.4,
-<https://CRAN.R-project.org/package=dplyr>.
+- Allaire J, Xie Y, Dervieux C, McPherson J, Luraschi J, Ushey K, Atkins
+  A, Wickham H, Cheng J, Chang W, Iannone R (2023). *rmarkdown: Dynamic
+  Documents for R*. R package version 2.25,
+  <https://github.com/rstudio/rmarkdown>.
 
-Fujiyoshi, K., Bruford, E. A., Mroz, P., Sims, C. L., O’Leary, T. J.,
-Lo, A. W. I., … Ogino, S. (2021). Standardizing gene product
-nomenclature—a call to action. Proceedings of the National Academy of
-Sciences of the United States of America, 118(3).
-<doi:10.1073/pnas.2025207118>
+- Bache S, Wickham H (2022). *magrittr: A Forward-Pipe Operator for R*.
+  R package version 2.0.3,
+  <https://CRAN.R-project.org/package=magrittr>.
 
-H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
-New York, 2016.
+- Csardi G, Nepusz T (2006). “The igraph software package for complex
+  network research.” *InterJournal*, *Complex Systems*, 1695.
+  <https://igraph.org>.
 
-Csardi G, Nepusz T (2006). “The igraph software package for complex
-network research.” *InterJournal*, *Complex Systems*, 1695.
-<https://igraph.org>.
+- Fujiyoshi, K., Bruford, E. A., Mroz, P., Sims, C. L., O’Leary, T. J.,
+  Lo, A. W. I., … Ogino, S. (2021). Standardizing gene product
+  nomenclature—a call to action. Proceedings of the National Academy of
+  Sciences of the United States of America, 118(3).
+  <doi:10.1073/pnas.2025207118>
 
-Lachmann, A., Xu, H., Krishnan, J., Berger, S. I., Mazloom, A. R., &
-Ma’ayan, A. (2010). ChEA: transcription factor regulation inferred from
-integrating genome-wide ChIP-X experiments. Bioinformatics (Oxford,
-England), 26(19), 2438–2444. <doi:10.1093/bioinformatics/btq466>
+- H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
+  Springer-Verlag New York, 2016. <https://ggplot2.tidyverse.org>
 
-Liberzon, A., Birger, C., Thorvaldsdóttir, H., Ghandi, M., Mesirov, J.
-P., & Tamayo, P. (2015). The molecular signatures database hallmark gene
-set collection. Cell Systems, 1(6), 417–425.
-<doi:10.1016/j.cels.2015.12.004>
+- Lachmann, A., Xu, H., Krishnan, J., Berger, S. I., Mazloom, A. R., &
+  Ma’ayan, A. (2010). ChEA: transcription factor regulation inferred
+  from integrating genome-wide ChIP-X experiments. Bioinformatics
+  (Oxford, England), 26(19), 2438–2444.
+  <doi:10.1093/bioinformatics/btq466>
 
-Liska, O., Bohár, B., Hidas, A., Korcsmáros, T., Papp, B., Fazekas, D.,
-& Ari, E. (2022). TFLink: an integrated gateway to access transcription
-factor–target gene interactions for multiple species. Database: The
-Journal of Biological Databases and Curation, 2022, baac083.
-<doi:10.1093/database/baac083>
+- Liberzon, A., Birger, C., Thorvaldsdóttir, H., Ghandi, M., Mesirov, J.
+  P., & Tamayo, P. (2015). The molecular signatures database hallmark
+  gene set collection. Cell Systems, 1(6), 417–425.
+  <doi:10.1016/j.cels.2015.12.004>
 
-The R project for statistical computing. (n.d.). Retrieved November 15,
-2023, from R-project.org website: <http://www.R-project.org>
+- Liska, O., Bohár, B., Hidas, A., Korcsmáros, T., Papp, B., Fazekas,
+  D., & Ari, E. (2022). TFLink: an integrated gateway to access
+  transcription factor–target gene interactions for multiple species.
+  Database: The Journal of Biological Databases and Curation, 2022,
+  baac083. <doi:10.1093/database/baac083>
 
-Zhang, Q., Liu, W., Zhang, H.-M., Xie, G.-Y., Miao, Y.-R., Xia, M., &
-Guo, A.-Y. (2020). HTFtarget: A comprehensive database for regulations
-of human transcription factors and their targets. Genomics, Proteomics &
-Bioinformatics, 18(2), 120–128. <doi:10.1016/j.gpb.2019.09.006>
+- R Core Team (2022). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  <https://www.R-project.org/>
+
+- Wickham H (2011). “testthat: Get Started with Testing.” *The R
+  Journal*, *3*, 5-10.
+  <https://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf>.
+
+- Wickham H, François R, Henry L, Müller K, Vaughan D (2023). *dplyr: A
+  Grammar of Data Manipulation*. R package version 1.1.4,
+  <https://CRAN.R-project.org/package=dplyr>.
+
+- Xie Y (2023). *knitr: A General-Purpose Package for Dynamic Report
+  Generation in R*. R package version 1.45, <https://yihui.org/knitr/>.
+
+- Zhang, Q., Liu, W., Zhang, H.-M., Xie, G.-Y., Miao, Y.-R., Xia, M., &
+  Guo, A.-Y. (2020). HTFtarget: A comprehensive database for regulations
+  of human transcription factors and their targets. Genomics, Proteomics
+  & Bioinformatics, 18(2), 120–128. <doi:10.1016/j.gpb.2019.09.006>
 
 ## Acknowledgements
 
@@ -266,3 +292,8 @@ This package was developed as part of an assessment for 2023 BCB410H:
 Applied Bioinformat- ics course at the University of Toronto, Toronto,
 CANADA. `TRNValStandVis` welcomes issues, enhancement requests, and
 other contributions. To submit an issue, use the GitHub issues.
+
+## Package Structure
+
+``` r
+```
