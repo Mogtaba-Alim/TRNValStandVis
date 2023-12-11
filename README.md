@@ -227,6 +227,10 @@ No other aids were used in the generation of this package.
 
 ## References
 
+- Attali D, Edwards T (2021). *shinyalert: Easily Create Pretty Popup
+  Messages (Modals) in ‘Shiny’*. R package version 3.0.0,
+  <https://CRAN.R-project.org/package=shinyalert>.
+
 - Allaire J, Xie Y, Dervieux C, McPherson J, Luraschi J, Ushey K, Atkins
   A, Wickham H, Cheng J, Chang W, Iannone R (2023). *rmarkdown: Dynamic
   Documents for R*. R package version 2.25,
@@ -236,34 +240,39 @@ No other aids were used in the generation of this package.
   R package version 2.0.3,
   <https://CRAN.R-project.org/package=magrittr>.
 
+- Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie Y, Allen J,
+  McPherson J, Dipert A, Borges B (2023). *shiny: Web Application
+  Framework for R*. R package version 1.8.0.9000,
+  <https://github.com/rstudio/shiny>, <https://shiny.posit.co/>.
+
 - Csardi G, Nepusz T (2006). “The igraph software package for complex
   network research.” *InterJournal*, *Complex Systems*, 1695.
   <https://igraph.org>.
 
 - Fujiyoshi, K., Bruford, E. A., Mroz, P., Sims, C. L., O’Leary, T. J.,
   Lo, A. W. I., … Ogino, S. (2021). Standardizing gene product
-  nomenclature—a call to action. Proceedings of the National Academy of
-  Sciences of the United States of America, 118(3).
+  nomenclature—a call to action. *Proceedings of the National Academy of
+  Sciences of the United States of America*, 118(3).
   <doi:10.1073/pnas.2025207118>
 
 - H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
-  Springer-Verlag New York, 2016. <https://ggplot2.tidyverse.org>
+  *Springer-Verlag New York*, 2016. <https://ggplot2.tidyverse.org>
 
 - Lachmann, A., Xu, H., Krishnan, J., Berger, S. I., Mazloom, A. R., &
   Ma’ayan, A. (2010). ChEA: transcription factor regulation inferred
-  from integrating genome-wide ChIP-X experiments. Bioinformatics
-  (Oxford, England), 26(19), 2438–2444.
+  from integrating genome-wide ChIP-X experiments. *Bioinformatics
+  (Oxford, England)*, 26(19), 2438–2444.
   <doi:10.1093/bioinformatics/btq466>
 
 - Liberzon, A., Birger, C., Thorvaldsdóttir, H., Ghandi, M., Mesirov, J.
   P., & Tamayo, P. (2015). The molecular signatures database hallmark
-  gene set collection. Cell Systems, 1(6), 417–425.
+  gene set collection. *Cell Systems*, 1(6), 417–425.
   <doi:10.1016/j.cels.2015.12.004>
 
 - Liska, O., Bohár, B., Hidas, A., Korcsmáros, T., Papp, B., Fazekas,
   D., & Ari, E. (2022). TFLink: an integrated gateway to access
   transcription factor–target gene interactions for multiple species.
-  Database: The Journal of Biological Databases and Curation, 2022,
+  *Database: The Journal of Biological Databases and Curation*, 2022,
   baac083. <doi:10.1093/database/baac083>
 
 - R Core Team (2022). R: A language and environment for statistical
@@ -283,8 +292,9 @@ No other aids were used in the generation of this package.
 
 - Zhang, Q., Liu, W., Zhang, H.-M., Xie, G.-Y., Miao, Y.-R., Xia, M., &
   Guo, A.-Y. (2020). HTFtarget: A comprehensive database for regulations
-  of human transcription factors and their targets. Genomics, Proteomics
-  & Bioinformatics, 18(2), 120–128. <doi:10.1016/j.gpb.2019.09.006>
+  of human transcription factors and their targets. *Genomics,
+  Proteomics & Bioinformatics*, 18(2), 120–128.
+  <doi:10.1016/j.gpb.2019.09.006>
 
 ## Acknowledgements
 
@@ -296,4 +306,96 @@ other contributions. To submit an issue, use the GitHub issues.
 ## Package Structure
 
 ``` r
+.
+├── DESCRIPTION
+├── LICENSE
+├── LICENSE.md
+├── Meta
+│   └── vignette.rds
+├── NAMESPACE
+├── R
+│   ├── data.R
+│   ├── get_TF_TG_val.R
+│   ├── get_TF_Total_Val.R
+│   ├── get_TFs.R
+│   ├── get_TGs.R
+│   ├── plot_TF_TG_val.R
+│   ├── plot_TF_Total_Val.R
+│   ├── plot_TF_regulon.R
+│   ├── plot_TFs_network.R
+│   └── runTRNValStandVis.R
+├── README.Rmd
+├── README.md
+├── TRNValStandVis.Rproj
+├── data
+│   ├── TF_Avg_Valid.rda
+│   ├── TF_TG_Valid_Comb.rda
+├── doc
+│   ├── TRNValStandVisVignettes.R
+│   ├── TRNValStandVisVignettes.Rmd
+│   └── TRNValStandVisVignettes.html
+├── inst
+│   ├── CITATION
+│   ├── extdata
+│   │   ├── TF_Avg_Valid_Example.png
+│   │   ├── TF_TG_Valid_Comb_Example.png
+│   │   ├── get_TF_TG_val_Example_1.png
+│   │   ├── get_TF_TG_val_Example_2.png
+│   │   ├── get_TF_TG_val_Example_3.png
+│   │   ├── get_TFs_Example_1.png
+│   │   ├── get_TFs_Example_2.png
+│   │   ├── get_TFs_Example_3.png
+│   │   ├── get_TGs_Example_1.png
+│   │   ├── get_TGs_Example_2.png
+│   │   ├── get_TGs_Example_3.png
+│   │   ├── plot_TF_TG_val_Example.png
+│   │   ├── plot_TF_TG_val_Example_1.png
+│   │   ├── plot_TF_TG_val_Example_2.png
+│   │   ├── plot_TF_TG_val_Example_3.png
+│   │   ├── plot_TF_regulon_Example.png
+│   │   ├── plot_TF_regulon_Example_1.png
+│   │   ├── plot_TF_regulon_Example_2.png
+│   │   ├── plot_TF_regulon_Example_3.png
+│   │   ├── plot_TF_total_val_Example.png
+│   │   ├── plot_TF_total_val_Example_1.png
+│   │   ├── plot_TFs_network_Example.png
+│   │   ├── plot_TFs_network_Example_1.png
+│   │   ├── plot_TFs_network_Example_2.png
+│   │   └── plot_TFs_network_Example_3.png
+│   └── shiny-scripts
+│       ├── app.R
+│       └── www
+│           ├── TF_Avg_Valid_Example.png
+│           ├── TF_TG_Valid_Comb_Example.png
+│           ├── get_TF_TG_val_Example_1.png
+│           ├── plot_TF_TG_val_Example.png
+│           ├── plot_TF_regulon_Example.png
+│           ├── plot_TF_total_val_Example.png
+│           └── plot_TFs_network_Example.png
+├── man
+│   ├── TF_Avg_Valid.Rd
+│   ├── TF_TG_Valid_Comb.Rd
+│   ├── get_TF_TG_val.Rd
+│   ├── get_TF_Total_Val.Rd
+│   ├── get_TFs.Rd
+│   ├── get_TGs.Rd
+│   ├── plot_TF_TG_val.Rd
+│   ├── plot_TF_regulon.Rd
+│   ├── plot_TF_total_val.Rd
+│   ├── plot_TFs_network.Rd
+│   └── runTRNValStandVis.Rd
+├── tests
+│   ├── testthat
+│   │   ├── _snaps
+│   │   ├── test-get_TF_TG_val.R
+│   │   ├── test-get_TF_Total_Val.R
+│   │   ├── test-get_TFs.R
+│   │   ├── test-get_TGs.R
+│   │   ├── test-plot_TF_TG_val.R
+│   │   ├── test-plot_TF_Total_Val.R
+│   │   ├── test-plot_TF_regulon.R
+│   │   └── test-plot_TFs_network.R
+│   └── testthat.R
+└── vignettes
+    └── TRNValStandVisVignettes.Rmd
 ```

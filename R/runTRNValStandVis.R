@@ -13,7 +13,6 @@
 #' TRNValStandVis::runTRNValStandVis()
 #' }
 #'
-#' @references
 #'
 #' @export
 #' @importFrom shiny runApp
