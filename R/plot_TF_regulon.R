@@ -80,7 +80,7 @@ plot_TF_regulon <- function(gene_name, max_TFs = 30, max_targets = 30) {
 
   # Plot the graph with title and improved layout
   plot(graph, layout = layout, edge.arrow.size = 0.5, main = "Transcription Factor Regulon",
-       vertex.label.cex = 0.7)
+       vertex.label.cex = 0.8)
 
   # Add a legend to the plot (adjust position and size)
   legend("topright", inset = c(0, -0.02), legend = c("Gene", "Regulator", "Target"),

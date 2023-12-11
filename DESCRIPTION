@@ -21,6 +21,7 @@ Imports:
     dplyr,
     ggplot2,
     igraph,
-    magrittr
+    magrittr,
+    shiny
 VignetteBuilder: knitr
 LazyData: true
