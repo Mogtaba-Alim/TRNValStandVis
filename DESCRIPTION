@@ -22,7 +22,6 @@ Imports:
     ggplot2,
     igraph,
     magrittr,
-    shiny,
-    shinyalert
+    shiny
 VignetteBuilder: knitr
 LazyData: true

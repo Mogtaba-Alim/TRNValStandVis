@@ -227,10 +227,6 @@ No other aids were used in the generation of this package.
 
 ## References
 
-- Attali D, Edwards T (2021). *shinyalert: Easily Create Pretty Popup
-  Messages (Modals) in ‘Shiny’*. R package version 3.0.0,
-  <https://CRAN.R-project.org/package=shinyalert>.
-
 - Allaire J, Xie Y, Dervieux C, McPherson J, Luraschi J, Ushey K, Atkins
   A, Wickham H, Cheng J, Chang W, Iannone R (2023). *rmarkdown: Dynamic
   Documents for R*. R package version 2.25,

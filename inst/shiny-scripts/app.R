@@ -1,7 +1,4 @@
 
-library(shiny)
-library(shinyalert)
-
 ui <- fluidPage(
   titlePanel("TRNValStandVis: Visualization, Standardization and Validation of TF-TG Interactions"),
   tabsetPanel(
